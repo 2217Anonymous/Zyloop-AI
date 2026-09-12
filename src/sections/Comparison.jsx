@@ -1,11 +1,31 @@
 import { useState } from 'react'
+import {
+  LiaBoltSolid,
+  LiaCheckSolid,
+  LiaCommentsSolid,
+  LiaCreditCardSolid,
+  LiaGlobeSolid,
+  LiaGraduationCapSolid,
+  LiaHospitalSolid,
+  LiaTimesSolid,
+  LiaUsersSolid,
+} from 'react-icons/lia'
 import { Container } from '../components/Grid'
 import ScrollWatermark from '../components/ui/ScrollWatermark'
+
+const iconMap = {
+  platform: LiaGlobeSolid,
+  chatbot: LiaCommentsSolid,
+  automation: LiaBoltSolid,
+  crm: LiaUsersSolid,
+  lms: LiaGraduationCapSolid,
+  finance: LiaCreditCardSolid,
+  hms: LiaHospitalSolid,
+}
 
 const categories = [
   {
     id: 'platform',
-    icon: '🌐',
     badge: 'Core Infrastructure',
     label: 'Platform',
     subtitle: 'Unified Architecture',
@@ -47,7 +67,6 @@ const categories = [
   },
   {
     id: 'chatbot',
-    icon: '💬',
     badge: 'Conversational AI',
     label: 'Chatbot',
     subtitle: 'Omnichannel Chat',
@@ -89,7 +108,6 @@ const categories = [
   },
   {
     id: 'automation',
-    icon: '⚡',
     badge: 'Process Automation',
     label: 'Automation',
     subtitle: 'Workflow Orchestration',
@@ -131,7 +149,6 @@ const categories = [
   },
   {
     id: 'crm',
-    icon: '👥',
     badge: 'Customer Intelligence',
     label: 'CRM',
     subtitle: 'Customer Intelligence',
@@ -173,7 +190,6 @@ const categories = [
   },
   {
     id: 'lms',
-    icon: '🎓',
     badge: 'Adaptive Learning',
     label: 'LMS',
     subtitle: 'Adaptive Learning',
@@ -215,7 +231,6 @@ const categories = [
   },
   {
     id: 'finance',
-    icon: '💳',
     badge: 'Digital Finance',
     label: 'Finance',
     subtitle: 'Digital Lending Ops',
@@ -257,7 +272,6 @@ const categories = [
   },
   {
     id: 'hms',
-    icon: '🏥',
     badge: 'Healthcare Ops',
     label: 'HMS',
     subtitle: 'Hospital Operations',
@@ -358,6 +372,7 @@ export default function Comparison() {
   const [activeTab, setActiveTab] = useState(0)
 
   const current = categories[activeTab]
+  const ContentIcon = iconMap[current.id]
   const delta = current.score.zyloopai - current.score.legacy
 
   return (
@@ -390,6 +405,7 @@ export default function Comparison() {
             <div className="zen-vtab-nav-list" role="tablist">
               {categories.map((cat, idx) => {
                 const isActive = idx === activeTab
+                const Icon = iconMap[cat.id]
                 return (
                   <button
                     key={cat.id}
@@ -400,7 +416,7 @@ export default function Comparison() {
                     onClick={() => setActiveTab(idx)}
                   >
                     <span className="zen-vtab-index">0{idx + 1}</span>
-                    <span className="zen-vtab-icon">{cat.icon}</span>
+                    <span className="zen-vtab-icon">{Icon ? <Icon aria-hidden="true" /> : null}</span>
                     <div className="zen-vtab-text">
                       <span className="zen-vtab-label">{cat.label}</span>
                       <span className="zen-vtab-sub">{cat.subtitle}</span>
@@ -417,7 +433,9 @@ export default function Comparison() {
             {/* Content Top Bar */}
             <div className="zen-content-topbar">
               <div className="zen-content-title-box">
-                <span className="zen-content-icon">{current.icon}</span>
+                <span className="zen-content-icon">
+                  {ContentIcon ? <ContentIcon aria-hidden="true" /> : null}
+                </span>
                 <div>
                   <span className="zen-content-badge">{current.badge}</span>
                   <h3 className="zen-content-title">{current.title}</h3>
@@ -446,7 +464,9 @@ export default function Comparison() {
                 <ul className="zen-list">
                   {current.zyloopaiPoints.map((pt) => (
                     <li key={pt} className="zen-list-item item-green">
-                      <span className="zen-check-icon check-green">✓</span>
+                      <span className="zen-check-icon check-green">
+                        <LiaCheckSolid aria-hidden="true" />
+                      </span>
                       <span className="zen-item-text">{pt}</span>
                     </li>
                   ))}
@@ -468,7 +488,9 @@ export default function Comparison() {
                 <ul className="zen-list">
                   {current.legacyPoints.map((pt) => (
                     <li key={pt} className="zen-list-item item-red">
-                      <span className="zen-check-icon check-red">✕</span>
+                      <span className="zen-check-icon check-red">
+                        <LiaTimesSolid aria-hidden="true" />
+                      </span>
                       <span className="zen-item-text text-muted">{pt}</span>
                     </li>
                   ))}

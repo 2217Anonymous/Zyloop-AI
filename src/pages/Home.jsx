@@ -1,3 +1,4 @@
+import { useOutletContext } from 'react-router-dom'
 import Seo from '../components/Seo'
 import HeroSlider from '../components/home/HeroSlider'
 import About from '../sections/About'
@@ -11,6 +12,8 @@ import Contact from '../sections/Contact'
 import { breadcrumbJsonLd, organizationJsonLd, seoPages, websiteJsonLd } from '../data/seo'
 
 export default function Home() {
+  const { setMenuOpen } = useOutletContext() || {}
+
   return (
     <main className="home-page">
       <Seo
@@ -21,7 +24,7 @@ export default function Home() {
           breadcrumbJsonLd([{ name: 'Home', path: '/' }]),
         ]}
       />
-      <HeroSlider />
+      <HeroSlider onMenuOpen={() => setMenuOpen?.(true)} />
       <About />
       <Stats />
       <Team />

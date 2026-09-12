@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
+import { FaLock } from 'react-icons/fa'
 import { useAuth } from '../../context/AuthContext'
 import { useToast } from '../../context/ToastContext'
 import { getStoredToken } from '../../utils/authStorage'
@@ -42,42 +43,63 @@ export default function AdminLogin() {
   return (
     <div className="cms-login-page">
       <Seo {...seoPages.admin} title="Admin Login | ZYLOOP AI" />
+      <div className="cms-login-bg" aria-hidden="true">
+        <span className="cms-login-orb cms-login-orb-cyan" />
+        <span className="cms-login-orb cms-login-orb-blue" />
+        <span className="cms-login-orb cms-login-orb-violet" />
+        <span className="cms-login-ring cms-login-ring-one" />
+        <span className="cms-login-ring cms-login-ring-two" />
+        <span className="cms-login-wave" />
+      </div>
       <div className="cms-login-card">
         <div className="cms-login-brand">
-          <BrandLogo width={200} />
-          <p>Content Management System</p>
+          <BrandLogo width={168} />
+          <span className="cms-login-badge">Content Management System</span>
         </div>
 
-        <h1>Admin Login</h1>
-        <p className="cms-login-sub">Sign in to manage blogs, testimonials, and FAQs.</p>
+        <div className="cms-login-heading">
+          <h1>Admin Login</h1>
+          <p className="cms-login-sub">Sign in to manage blogs, testimonials, and FAQs.</p>
+        </div>
 
         <form onSubmit={handleSubmit} className="cms-login-form">
-          <label htmlFor="username">Username</label>
-          <input
-            id="username"
-            type="text"
-            className="cms-input"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            autoComplete="username"
-            required
-          />
+          <div className="cms-login-field">
+            <label htmlFor="username">Username</label>
+            <input
+              id="username"
+              type="text"
+              className="cms-input"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              autoComplete="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
 
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            className="cms-input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete="current-password"
-            required
-          />
+          <div className="cms-login-field">
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              className="cms-input"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
 
-          {error && <p className="cms-login-error">{error}</p>}
+          {error && <p className="cms-login-error" role="alert">{error}</p>}
 
-          <button type="submit" className="cms-btn cms-btn-primary cms-btn-block" disabled={loading}>
-            {loading ? 'Signing in…' : 'Sign In'}
+          <button type="submit" className="cms-btn cms-btn-primary cms-btn-block cms-login-submit" disabled={loading}>
+            {loading ? 'Signing in…' : (
+              <>
+                <FaLock aria-hidden="true" />
+                Sign In
+              </>
+            )}
           </button>
         </form>
       </div>

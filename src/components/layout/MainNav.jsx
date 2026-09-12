@@ -47,7 +47,7 @@ export default function MainNav({ activeSection, isHome, onMenuOpen }) {
             </NavAnchor>
             <button
               type="button"
-              className="sidemenu_btn sidemenu_btn-inline sidemenu_btn-compact"
+              className="site-menu-toggle"
               id="sidemenu_toggle"
               onClick={onMenuOpen}
               aria-label="Open side menu"

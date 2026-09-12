@@ -9,7 +9,7 @@ import NavAnchor from '../NavAnchor'
 import VideoModal from '../VideoModal'
 import { scrollToHash } from '../../hooks/useSmoothScroll'
 
-export default function HeroSlider() {
+export default function HeroSlider({ onMenuOpen }) {
   const { settings } = useSiteSettings()
   const videoRef = useRef(null)
   const [videoOpen, setVideoOpen] = useState(false)
@@ -114,13 +114,25 @@ export default function HeroSlider() {
             ))}
           </ul>
 
-          <button
-            type="button"
-            className="hero-bottom-nav-cta"
-            onClick={() => scrollToHash('#contact')}
-          >
-            Get Started
-          </button>
+          <div className="hero-bottom-nav-end">
+            <button
+              type="button"
+              className="hero-bottom-nav-cta"
+              onClick={() => scrollToHash('#contact')}
+            >
+              Get Started
+            </button>
+            <button
+              type="button"
+              className="hero-bottom-nav-menu"
+              onClick={onMenuOpen}
+              aria-label="Open menu"
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
         </nav>
       </div>
 

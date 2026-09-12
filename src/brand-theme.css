@@ -688,19 +688,21 @@ header.site-header .inner-header:not(.header-appear) .main-navigation,
   min-width: 0;
 }
 
-.site-header .main-navigation nav .navbar-nav,
-.site-header .site-main-nav {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-wrap: nowrap !important;
-  gap: 8px 26px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  list-style: none !important;
-  min-height: 0 !important;
-  overflow: visible !important;
+@media (min-width: 1200px) {
+  .site-header .main-navigation nav .navbar-nav,
+  .site-header .site-main-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    gap: 8px 26px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
 }
 
 .site-header .main-navigation nav .site-main-nav .nav-item,
@@ -777,9 +779,11 @@ header.site-header .inner-header:not(.header-appear) .main-navigation,
   opacity: 0.92;
 }
 
-.site-header .inner-header:not(.header-appear) .main-nav-actions .fixed-nav-links,
-.site-header .inner-header:not(.header-appear) .sidemenu_btn-compact {
-  display: none !important;
+@media (min-width: 1200px) {
+  .site-header .inner-header:not(.header-appear) .main-nav-actions .fixed-nav-links,
+  .site-header .inner-header:not(.header-appear) .sidemenu_btn-compact {
+    display: none !important;
+  }
 }
 
 .header-appear {
@@ -844,13 +848,14 @@ header.site-header .inner-header:not(.header-appear) .main-navigation,
 }
 
 @media (max-width: 991px) {
+  .site-header .upper-nav,
+  .header-appear .upper-nav,
   .site-header .site-primary-nav,
+  .header-appear .site-primary-nav,
+  .site-header .main-navigation nav,
+  .header-appear .main-navigation nav,
   .site-header .site-nav-cta,
-  .site-header .upper-nav .top-personal-info li:last-child {
-    display: none !important;
-  }
-
-  .site-header .inner-header:not(.header-appear) .sidemenu_btn-compact {
+  .header-appear .site-nav-cta {
     display: none !important;
   }
 
