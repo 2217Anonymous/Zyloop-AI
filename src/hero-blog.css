@@ -114,13 +114,13 @@
   background:
     linear-gradient(
       115deg,
-      rgba(247, 28, 82, 0.28) 0%,
-      rgba(85, 76, 134, 0.16) 42%,
-      rgba(57, 212, 122, 0.1) 100%
+      rgba(0, 180, 255, 0.22) 0%,
+      rgba(59, 91, 255, 0.16) 42%,
+      rgba(122, 77, 255, 0.12) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(85, 76, 134, 0.12) 0%,
+      rgba(59, 91, 255, 0.1) 0%,
       rgba(11, 11, 18, 0.04) 45%,
       rgba(11, 11, 18, 0.22) 100%
     );
@@ -211,7 +211,7 @@
 }
 
 .hero-cinematic-btn--primary {
-  background: #554c86;
+  background: #7a4dff;
   color: #fff;
   box-shadow: 0 10px 24px rgba(85, 76, 134, 0.35);
 }
@@ -283,7 +283,7 @@
 .hero-bottom-nav-links button:hover,
 .hero-bottom-nav-links button.is-active,
 .hero-bottom-nav-link:hover {
-  color: #554c86;
+  color: #7a4dff;
   background: rgba(85, 76, 134, 0.08);
 }
 
@@ -293,7 +293,7 @@
   padding: 0 20px;
   border: 0;
   border-radius: 999px;
-  background: #554c86;
+  background: #7a4dff;
   color: #fff;
   cursor: pointer;
   font-family: var(--font-body, 'Inter', sans-serif);
@@ -301,15 +301,15 @@
   font-weight: 700;
 }
 
-/* Blog vertical slider */
+/* Blog vertical slider — logo blue */
 .blog-slider-sec .left-overlay,
 .blog-slider-sec .blog-inner-overlay {
-  background-color: #f71c52 !important;
+  background-color: #00b4ff !important;
 }
 
 .blog-slider-sec .blog-slider-kicker {
   margin: 0 0 10px;
-  color: rgba(255, 255, 255, 0.88) !important;
+  color: #000000 !important;
   font-family: var(--font-display, 'Outfit', sans-serif);
   font-size: 13px;
   font-weight: 700;
@@ -324,7 +324,7 @@
 .blog-slider-sec .blog-teaser-meta,
 .blog-slider-sec .blog-teaser-excerpt,
 .blog-slider-sec .blog-slider-count {
-  color: #fff !important;
+  color: #000000 !important;
 }
 
 .blog-slider-sec .heading,
@@ -337,28 +337,105 @@
   min-height: 168px;
 }
 
+.blog-slider-copy.is-up {
+  animation: blogSlideUp 0.45s ease;
+}
+
+.blog-slider-copy.is-down {
+  animation: blogSlideDown 0.45s ease;
+}
+
+@keyframes blogSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blogSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .blog-slider-count {
   margin: 18px 0 0;
   font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #0f172a;
+  color: #000000;
+}
+
+.blog-slider-list {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 460px;
+}
+
+.blog-slider-list-btn {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #000000;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+  cursor: pointer;
+}
+
+.blog-slider-list-btn span {
+  flex-shrink: 0;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.blog-slider-list-btn.is-active {
+  color: #000000;
+  font-weight: 700;
 }
 
 .blog-slider-media {
   position: relative;
-}
-
-.blog-img-swiper {
-  width: 100%;
-  height: 440px;
   overflow: hidden;
 }
 
-.blog-img-swiper .swiper-slide,
-.blog-img-swiper .blog-featured-image {
+.blog-slider-image-frame {
+  width: 100%;
+  min-height: 440px;
+}
+
+.blog-slider-image-frame.is-up {
+  animation: blogSlideUp 0.45s ease;
+}
+
+.blog-slider-image-frame.is-down {
+  animation: blogSlideDown 0.45s ease;
+}
+
+.blog-slider-image-frame .blog-featured-image {
   height: 100%;
+  min-height: 440px;
 }
 
 .blog-slider-sec .slider-arrows {
@@ -385,13 +462,20 @@
 }
 
 .blog-slider-sec .slider-arr:hover {
-  background: #f71c52;
+  background: #7a4dff;
   color: #fff;
 }
 
+.blog-slider-sec .anim-btn,
+.blog-slider-sec .white-trans-btn {
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
 @media (min-width: 992px) {
-  .blog-img-swiper {
-    height: 520px;
+  .blog-slider-image-frame,
+  .blog-slider-image-frame .blog-featured-image {
+    min-height: 520px;
   }
 }
 

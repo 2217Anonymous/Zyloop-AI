@@ -106,7 +106,7 @@
 .blog-sub-heading{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    color: #f71c52;
+    color: #3b5bff;
     margin-top: 30px;
     margin-bottom: 0px;
     display: inline-block;
@@ -115,7 +115,7 @@
     display: inline-block;
     width: 30px;
     height: 2px;
-    background-color: #f71c52;
+    background-color: #3b5bff;
     margin-bottom: 5px;
     margin-right: 8px;
 }
@@ -137,7 +137,7 @@
 .blog-content .side_tags .search-bar form input{
     border-radius: 10px;
     position: relative;
-    border: solid .5px #f71c52;
+    border: solid .5px #3b5bff;
     padding: 20px;
 }
 .blog-content .side_tags .search-bar form span{
@@ -148,7 +148,7 @@
 }
 .blog-content .side_tags .search-bar form span button{
     border-radius: 10px;
-    background-color:#f71c52;
+    background-color:#3b5bff;
     color: #FFFFFF;
     padding-left: 15px;
     padding-right: 15px;
@@ -156,15 +156,15 @@
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
     transition: .8s ease;
-    border: solid 1px #f71c52;
+    border: solid 1px #3b5bff;
 }
 .blog-content .side_tags .search-bar form:hover input{
-    border:  solid .5px #f71c52;
+    border:  solid .5px #3b5bff;
 }
 .blog-content .side_tags .search-bar form span button:hover{
-    background-color:#f71c52;
+    background-color:#3b5bff;
     cursor: pointer;
-    border: solid 1px #f71c52;
+    border: solid 1px #3b5bff;
 }
 .blog-content .side_tags .search-bar form span button:focus{
    outline: none;
@@ -214,7 +214,7 @@
     transition: .8s ease;
 }
 .blog-content .cat_sec ul li:hover a{
-    color:#f71c52;
+    color:#3b5bff;
 }
 .blog-content .cat_sec ul li:hover{
     cursor: pointer;
@@ -291,7 +291,7 @@
     transition: .8s ease;
 }
 .blog-content .popular_posts .media-box:hover .box-detail h2{
-    color:#f71c52;
+    color:#3b5bff;
 }
 .blog-content .popular_posts .media-box .box-detail p span{
     font-weight: bold;
@@ -320,11 +320,11 @@
     cursor: pointer;
 }
 .blog-content .tags_sec .tags span:hover{
-    background-color:#f71c52;
+    background-color:#3b5bff;
     color: white;
     /*background-color: #FFFFFF;*/
     box-shadow: 1px 1px 15px #e1e1e1;
-    border: solid 1px #f71c52;
+    border: solid 1px #3b5bff;
 }
 /*Tags end*/
 
@@ -384,7 +384,7 @@
     text-decoration: none;
 }
 .blog-content .main_content .single_blog .single_detail .blog-text a:hover{
-    color:#f71c52;
+    color:#3b5bff;
 }
 .blog-content .main_content .single_blog .single_detail .p-text{
     font-family:'Inter', sans-serif;
@@ -417,18 +417,18 @@
 }
 .blog-content .main_content .single_blog .single_detail a.our-btn{
     color:white;
-    background-color:#f71c52;
+    background-color:#3b5bff;
     font-family: 'Inter', sans-serif;
     font-weight: normal;
     font-size: 16px;
     padding: 8px 30px 8px 30px;
-    border: solid 1px #f71c52;
+    border: solid 1px #3b5bff;
     transition: .8s ease;
     text-decoration: none;
 }
 .blog-content .main_content .single_blog .single_detail a.our-btn:hover{
     background-color: white;
-    color:#f71c52;
+    color:#3b5bff;
 
 }
 .blog-content .main_content .single_blog .single_img .img-gall{
@@ -465,7 +465,7 @@
 .blog-content nav ul li a{
     color:#000000;
     border-radius: 50%;
-    border: solid .5px #f71c52;
+    border: solid .5px #3b5bff;
     border:none;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
@@ -477,16 +477,16 @@
 .blog-content nav ul li a.active{
     border-radius: 50%;
     color:white;
-    background-color:#f71c52;
+    background-color:#3b5bff;
 }
 .blog-content .page-link {
-    /*border:solid .5px #f71c52;*/
+    /*border:solid .5px #3b5bff;*/
 }
 .blog-content li:first-child a,.blog-content li:last-child a{
     border: none;
 }
 .blog-content nav ul li a:hover{
-    background-color:#f71c52;
+    background-color:#3b5bff;
     color: #FFFFFF;
 }
 .blog-content nav ul li:first-child a:hover,.blog-content nav ul li:last-child a:hover{
@@ -543,7 +543,7 @@
 
 /*}*/
 .blog-content .main_content .detail_blog .blog_detail span a:hover{
-    color:#f71c52;
+    color:#3b5bff;
     /*font-weight: bold;*/
 }
 .blog-content .main_content .detail_blog .blog_detail span a{
@@ -619,7 +619,7 @@
 }
 .blog-content .detail_blog .qoute{
     padding: 15px 15px 15px 35px;
-    border-left: solid 3px #f71c52;
+    border-left: solid 3px #3b5bff;
     margin-bottom: 20px;
 }
 .blog-content .detail_blog .cube-sec{
@@ -647,8 +647,8 @@
     transition: .8s ease;
 }
 .blog-content .detail_blog .tags span:hover{
-    border: solid 1px #f71c52;
-    background-color: #f71c52;
+    border: solid 1px #3b5bff;
+    background-color: #3b5bff;
 }
 .blog-content .detail_blog .tags span a:hover{
     color:#ffffff !important;
@@ -836,18 +836,18 @@ font-family: 'Inter', sans-serif;
     font-size: 14px;
 }
 .red-btn{
-    background-color:#f71c52;
+    background-color:#3b5bff;
     color: #FFFFFF;
     padding: 8px 35px 10px 35px;
     margin-top: 30px;
-    border: solid 1px #f71c52;
+    border: solid 1px #3b5bff;
     transition: .8s ease;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
 }
 .red-btn:hover{
     background-color: #FFFFFF;
-    color:#f71c52;
+    color:#3b5bff;
 }
 
 /*relatec post css*/
@@ -862,7 +862,7 @@ font-family: 'Inter', sans-serif;
     display: inline-block;
     height: 2px;
     width: 4px;
-    background-color: #f71c52;
+    background-color: #3b5bff;
     margin-right: 5px;
     transition: .8s ease;
     margin-bottom: 4px;
@@ -889,7 +889,7 @@ font-family: 'Inter', sans-serif;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     margin-top: 0;
-    color: #f71c52;
+    color: #3b5bff;
     text-decoration: none;
 }
 .related-blog-posts .single_blog h2{
@@ -901,7 +901,7 @@ font-family: 'Inter', sans-serif;
     transition: .8s ease;
 }
 .related-blog-posts .single_blog:hover h2{
-    color: #f71c52;
+    color: #3b5bff;
 }
 .related-blog-posts .single_blog .small-text{
     margin-bottom: 0;
@@ -1015,7 +1015,7 @@ font-family: 'Inter', sans-serif;
     }
     .dropdown-menu .dropdown-item:hover{
         background-color: transparent !important;
-        color:#f71c52 !important;
+        color:#3b5bff !important;
     }
 
 }

@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Controller, EffectFade } from 'swiper/modules'
 import { getBlogs } from '../api/blogs'
 import { formatBlogDateShort } from '../api/client'
 import { Container, Row, Col } from '../components/Grid'
@@ -17,22 +15,35 @@ export default function BlogTeaser() {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
-  const [textSwiper, setTextSwiper] = useState(null)
-  const [imgSwiper, setImgSwiper] = useState(null)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [direction, setDirection] = useState('down')
 
   useEffect(() => {
     getBlogs()
       .then((data) => {
         const sorted = [...data].sort((a, b) => new Date(b.date) - new Date(a.date))
         setPosts(sorted)
+        setActiveIndex(0)
       })
       .catch((err) => setError(err.message || 'Unable to load blogs'))
       .finally(() => setLoading(false))
   }, [])
 
-  const canSlide = posts.length > 1
+  const total = posts.length
+  const canSlide = total > 1
   const activePost = posts[activeIndex]
+
+  const goTo = useCallback(
+    (index, dir = 'down') => {
+      if (!total) return
+      setDirection(dir)
+      setActiveIndex((index + total) % total)
+    },
+    [total],
+  )
+
+  const goPrev = useCallback(() => goTo(activeIndex - 1, 'up'), [activeIndex, goTo])
+  const goNext = useCallback(() => goTo(activeIndex + 1, 'down'), [activeIndex, goTo])
 
   return (
     <section className="blog-sec blog-slider-sec" id="blog">
@@ -58,40 +69,16 @@ export default function BlogTeaser() {
                 emptyMessage="No blog posts published yet."
               />
 
-              {!loading && !error && posts.length > 0 && (
-                <Swiper
-                  modules={[Controller, EffectFade]}
-                  effect="fade"
-                  fadeEffect={{ crossFade: true }}
-                  onSwiper={setTextSwiper}
-                  controller={{ control: imgSwiper }}
-                  allowTouchMove={canSlide}
-                  loop={canSlide}
-                  speed={600}
-                  autoHeight
-                  className="blog-text-swiper"
-                  onSlideChange={(instance) => setActiveIndex(instance.realIndex)}
-                >
-                  {posts.map((post) => (
-                    <SwiperSlide key={post.id || post.slug}>
-                      <div className="blog-slider-copy">
-                        <p className="text blog-teaser-latest-title">{post.title}</p>
-                        <p className="text blog-teaser-meta">
-                          {formatBlogDateShort(post.date)}
-                          {post.author ? ` · ${post.author}` : ''}
-                          {post.categories?.[0] ? ` · ${post.categories[0]}` : ''}
-                        </p>
-                        {post.excerpt && <p className="text blog-teaser-excerpt">{post.excerpt}</p>}
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              )}
-
-              {!loading && !error && posts.length === 0 && (
-                <p className="text">
-                  Insights on agentic AI, voice automation, and enterprise workflow transformation.
-                </p>
+              {activePost && (
+                <div key={`${activePost.id || activePost.slug}-${direction}`} className={`blog-slider-copy is-${direction}`}>
+                  <p className="text blog-teaser-latest-title">{activePost.title}</p>
+                  <p className="text blog-teaser-meta">
+                    {formatBlogDateShort(activePost.date)}
+                    {activePost.author ? ` · ${activePost.author}` : ''}
+                    {activePost.categories?.[0] ? ` · ${activePost.categories[0]}` : ''}
+                  </p>
+                  {activePost.excerpt && <p className="text blog-teaser-excerpt">{activePost.excerpt}</p>}
+                </div>
               )}
 
               {activePost ? (
@@ -112,38 +99,41 @@ export default function BlogTeaser() {
                 </Link>
               )}
 
-              {posts.length > 0 && (
+              {total > 0 && (
                 <p className="blog-slider-count">
-                  {padIndex(activeIndex + 1)} / {padIndex(posts.length)}
+                  {padIndex(activeIndex + 1)} / {padIndex(total)}
                 </p>
+              )}
+
+              {total > 0 && (
+                <ul className="blog-slider-list">
+                  {posts.map((post, index) => (
+                    <li key={post.id || post.slug}>
+                      <button
+                        type="button"
+                        className={`blog-slider-list-btn${index === activeIndex ? ' is-active' : ''}`}
+                        onClick={() => goTo(index, index > activeIndex ? 'down' : 'up')}
+                      >
+                        <span>{padIndex(index + 1)}</span>
+                        {post.title}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
               )}
             </div>
           </Col>
 
           <Col span={12} lg={6} offsetLg={1}>
             <div className="blog-img blog-slider-media wow fadeInRight">
-              {posts.length > 0 ? (
-                <Swiper
-                  modules={[Controller]}
-                  onSwiper={setImgSwiper}
-                  controller={{ control: textSwiper }}
-                  direction="vertical"
-                  speed={600}
-                  slidesPerView={1}
-                  allowTouchMove={canSlide}
-                  loop={canSlide}
-                  className="blog-img-swiper"
-                >
-                  {posts.map((post) => (
-                    <SwiperSlide key={`img-${post.id || post.slug}`}>
-                      <BlogFeaturedImage
-                        src={post.image || '/images/blog1.png'}
-                        alt={post.title || 'Blog post'}
-                        variant="teaser"
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+              {activePost ? (
+                <div key={`img-${activePost.id || activePost.slug}`} className={`blog-slider-image-frame is-${direction}`}>
+                  <BlogFeaturedImage
+                    src={activePost.image || '/images/blog1.png'}
+                    alt={activePost.title || 'Blog post'}
+                    variant="teaser"
+                  />
+                </div>
               ) : (
                 <BlogFeaturedImage
                   src="/images/blog1.png"
@@ -152,18 +142,7 @@ export default function BlogTeaser() {
                 />
               )}
 
-              {canSlide && (
-                <SliderArrows
-                  onUp={() => {
-                    imgSwiper?.slidePrev()
-                    textSwiper?.slidePrev()
-                  }}
-                  onDown={() => {
-                    imgSwiper?.slideNext()
-                    textSwiper?.slideNext()
-                  }}
-                />
-              )}
+              {canSlide && <SliderArrows onUp={goPrev} onDown={goNext} />}
             </div>
           </Col>
         </Row>

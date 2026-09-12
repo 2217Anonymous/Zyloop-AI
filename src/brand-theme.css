@@ -1,0 +1,429 @@
+/* ===================================
+   ZYLOOP AI — Previous UI, logo colors
+   Pink → Blue  |  Purple → Violet  |  Green → Cyan
+   =================================== */
+
+:root {
+  --brand-cyan: #00b4ff;
+  --brand-blue: #3b5bff;
+  --brand-violet: #7a4dff;
+  --brand-ink: #0b1220;
+  --brand-body: #1e293b;
+  --brand-muted: #334155;
+  --brand-line: #e2e8f0;
+  --brand-surface: #ffffff;
+  --brand-gradient: linear-gradient(90deg, #00b4ff 0%, #3b5bff 50%, #7a4dff 100%);
+  --marquee-bar-bg: #3b5bff;
+}
+
+a:hover,
+a:active {
+  color: var(--brand-blue);
+}
+
+.red-color { color: var(--brand-blue) !important; }
+.purple-color { color: var(--brand-violet) !important; }
+.green-color { color: var(--brand-cyan) !important; }
+
+.bg-red { background-color: var(--brand-blue) !important; }
+.bg-purple { background-color: var(--brand-violet) !important; }
+.bg-green { background-color: var(--brand-cyan) !important; }
+
+.color-lines .bg-red { background: var(--brand-blue) !important; }
+.color-lines .bg-purple { background: var(--brand-violet) !important; }
+.color-lines .bg-green { background: var(--brand-cyan) !important; }
+
+::-webkit-scrollbar-thumb { background: var(--brand-blue); }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-violet); }
+
+/* Buttons keep the original 3-tone system */
+.pink-btn {
+  background: var(--brand-blue) !important;
+  border-color: var(--brand-blue) !important;
+  color: #fff !important;
+}
+.green-btn {
+  background: var(--brand-cyan) !important;
+  border-color: var(--brand-cyan) !important;
+  color: #fff !important;
+}
+.purple-btn {
+  background: var(--brand-violet) !important;
+  border-color: var(--brand-violet) !important;
+  color: #fff !important;
+}
+
+.pink-btn:hover,
+.about-explore-btn:hover {
+  background: var(--brand-violet) !important;
+  border-color: var(--brand-violet) !important;
+  color: #fff !important;
+}
+
+.green-btn:hover {
+  background: var(--brand-blue) !important;
+  border-color: var(--brand-blue) !important;
+  color: #fff !important;
+}
+
+.purple-btn:hover {
+  background: var(--brand-blue) !important;
+  border-color: var(--brand-blue) !important;
+  color: #fff !important;
+}
+
+.hero-cinematic-btn--primary,
+.hero-bottom-nav-cta {
+  background: var(--brand-violet) !important;
+  border-color: var(--brand-violet) !important;
+  color: #fff !important;
+}
+
+/* ── About: violet + cyan columns ── */
+.about-purple-box {
+  background-color: var(--brand-violet) !important;
+  border: 0 !important;
+}
+
+.about-green-box {
+  background-color: var(--brand-cyan) !important;
+  border: 0 !important;
+  border-left: 0 !important;
+}
+
+.about-content-title,
+.about-content-text,
+.about-content-subhead,
+.about-feature-label {
+  color: #ffffff !important;
+}
+
+.about-content-subhead {
+  color: #e2e8f0 !important;
+}
+
+.about-content-text {
+  color: #f8fafc !important;
+  font-weight: 400 !important;
+}
+
+.about-content-kicker {
+  color: var(--brand-cyan) !important;
+  background: rgba(0, 180, 255, 0.18) !important;
+}
+
+.about-check-bullet,
+.about-explore-btn {
+  background: var(--brand-cyan) !important;
+  color: #fff !important;
+}
+
+.about-green-kicker,
+.about-green-heading,
+.about-green-sub,
+.clean-card-heading,
+.clean-card-desc,
+.clean-icon-svg,
+.clean-icon-holder {
+  color: #0b1220 !important;
+}
+
+.about-green-kicker {
+  background: rgba(11, 18, 32, 0.08) !important;
+}
+
+/* ── Team: logo blue ── */
+.team-sec .left-overlay,
+.team-sec .inner-team-sec {
+  background-color: var(--brand-blue) !important;
+}
+
+.team-sec .heading,
+.team-sec .heading span,
+.team-sec .text,
+.team-name,
+.team-designation {
+  color: #ffffff !important;
+}
+
+.team-designation {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+/* ── Testimonials / categories: logo violet ── */
+.testimonial-sec .right-overlay,
+.testimonial-sec .testimonial-area,
+#business-categories .testimonial-area {
+  background-color: var(--brand-violet) !important;
+}
+
+.testimonial-sec .heading,
+.testimonial-sec .heading span,
+.testimonial-sec .text,
+.testimonial-sec .user-name,
+#business-categories .testimonial-details .heading,
+#business-categories .testimonial-details .heading span,
+#business-categories .testimonial-details .text {
+  color: #ffffff !important;
+}
+
+#business-categories .testimonial-details .industry-section-kicker {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+#business-categories .testimonial-details .industry-section-kicker::after,
+.category-split-dot.is-active,
+.category-split-points li::before {
+  background: var(--brand-cyan) !important;
+}
+
+#business-categories .category-split-card,
+#business-categories .category-split-title-wrap,
+#business-categories .category-split-body {
+  background: #ffffff !important;
+}
+
+#business-categories .category-split-title {
+  color: #0b1220 !important;
+}
+
+#business-categories .category-split-title-badge {
+  color: var(--brand-blue) !important;
+}
+
+#business-categories .category-split-index {
+  color: #64748b !important;
+}
+
+#business-categories .category-split-desc {
+  color: #334155 !important;
+}
+
+#business-categories .category-split-points li {
+  color: #1e293b !important;
+}
+
+#business-categories .category-split-icon {
+  background: rgba(59, 91, 255, 0.1) !important;
+  border-color: rgba(59, 91, 255, 0.16) !important;
+  color: var(--brand-blue) !important;
+}
+
+#business-categories .category-tab.is-active,
+#business-categories .category-tab:hover {
+  color: var(--brand-blue) !important;
+  background: #ffffff !important;
+}
+
+.content-carousel-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+.content-carousel-title,
+.content-carousel-desc,
+.content-carousel-badge {
+  color: #ffffff !important;
+}
+
+/* ── Blog: previous split UI, cyan only on the left panel ── */
+.blog-sec,
+.blog-slider-sec {
+  background-color: #ffffff !important;
+}
+
+.blog-sec .left-overlay,
+.blog-sec .blog-inner-overlay,
+.blog-slider-sec .left-overlay,
+.blog-slider-sec .blog-inner-overlay {
+  background-color: #00b4ff !important;
+}
+
+.blog-sec .blog-detail .heading,
+.blog-sec .blog-detail .heading span,
+.blog-sec .blog-detail .text,
+.blog-slider-sec .heading,
+.blog-slider-sec .heading span,
+.blog-slider-sec .text,
+.blog-slider-sec .blog-teaser-latest-title,
+.blog-slider-sec .blog-teaser-meta,
+.blog-slider-sec .blog-teaser-excerpt,
+.blog-slider-sec .blog-slider-kicker,
+.blog-slider-sec .blog-slider-count,
+.blog-slider-sec .blog-slider-list-btn {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+.blog-slider-sec .anim-btn,
+.blog-slider-sec .white-trans-btn {
+  color: #000000 !important;
+  border-color: #000000 !important;
+  background: transparent !important;
+}
+
+/* ── Inner page banners: original 3-color split ── */
+.page-banner-side-left { background: var(--brand-cyan) !important; }
+.page-banner-side-right { background: var(--brand-violet) !important; }
+.page-banner .overlay,
+.page-banner .inner-overlay,
+.slider-sec .overlay,
+.slider-sec .inner-overlay {
+  background-color: var(--brand-blue) !important;
+}
+
+.page-banner .inner-slider-content h4,
+.page-banner-crumbs .breadcrumb-item,
+.page-banner-crumbs .breadcrumb-item a,
+.page-banner-crumbs .breadcrumb-item span,
+.slider-sec .inner-slider-content h4 {
+  color: #ffffff !important;
+}
+
+/* ── Light sections stay readable ── */
+.stats-modern-title,
+.stats-modern-desc,
+.stats-modern-card-title,
+.stats-modern-card-desc,
+.zen-vtab-title,
+.zen-vtab-desc,
+.faq-title,
+.faq-desc,
+.faq-question,
+.faq-answer,
+.contact-sec .heading,
+.contact-sec .contact-details .text,
+.contact-sec .contact-details ul li {
+  color: var(--brand-ink) !important;
+}
+
+.stats-modern-desc,
+.zen-vtab-desc,
+.faq-desc,
+.faq-answer {
+  color: var(--brand-body) !important;
+}
+
+.stats-modern-kicker,
+.zen-vtab-kicker,
+.faq-kicker {
+  color: var(--brand-blue) !important;
+  background: rgba(59, 91, 255, 0.08) !important;
+}
+
+/* Comparison — Zyloop cyan vs traditional violet */
+.zen-vtab-title span {
+  color: var(--brand-blue) !important;
+}
+
+.zen-vtab-sidebar-count {
+  color: var(--brand-blue) !important;
+  background: rgba(0, 180, 255, 0.14) !important;
+}
+
+.zen-vtab-item.active .zen-vtab-index,
+.zen-vtab-arrow {
+  color: var(--brand-blue) !important;
+}
+
+.zen-vtab-item.active::before {
+  background-color: var(--brand-blue) !important;
+}
+
+.zen-content-pill {
+  background-color: rgba(0, 180, 255, 0.14) !important;
+}
+
+.zen-content-pill-label {
+  color: #0369a1 !important;
+}
+
+.zen-content-pill-val,
+.text-green,
+.zen-card-headline.text-green,
+.zen-fstat-val.text-green {
+  color: #0284c7 !important;
+}
+
+.zen-card-zyloopai {
+  background-color: #e8f8ff !important;
+}
+
+.zen-card-legacy {
+  background-color: #f4f0ff !important;
+}
+
+.dot-green { background-color: var(--brand-cyan) !important; }
+.dot-red { background-color: var(--brand-violet) !important; }
+
+.pill-green {
+  background-color: #d7f3ff !important;
+  color: #0369a1 !important;
+}
+
+.pill-red {
+  background-color: #eee7ff !important;
+  color: #4c1d95 !important;
+}
+
+.check-green {
+  background-color: var(--brand-cyan) !important;
+}
+
+.check-red {
+  background-color: var(--brand-violet) !important;
+}
+
+.zen-delta-value {
+  color: var(--brand-blue) !important;
+}
+
+/* Hero overlay uses logo wash */
+.hero-cinematic-shade {
+  background:
+    linear-gradient(115deg, rgba(0, 180, 255, 0.22) 0%, rgba(59, 91, 255, 0.16) 48%, rgba(122, 77, 255, 0.14) 100%),
+    linear-gradient(180deg, rgba(11, 18, 32, 0.08) 0%, rgba(11, 18, 32, 0.02) 50%, rgba(11, 18, 32, 0.2) 100%) !important;
+}
+
+.hero-cinematic-title,
+.hero-cinematic-text,
+.hero-cinematic-badge,
+.hero-top-nav-link {
+  color: #fff !important;
+  text-shadow: 0 2px 18px rgba(11, 18, 32, 0.45);
+}
+
+.hero-bottom-nav-link,
+.hero-bottom-nav-links button {
+  color: var(--brand-ink) !important;
+  font-weight: 600 !important;
+}
+
+.hero-bottom-nav-link:hover,
+.hero-bottom-nav-links button:hover {
+  color: var(--brand-violet) !important;
+}
+
+.marquee-tier-text {
+  background: var(--brand-gradient) !important;
+}
+
+header .main-navigation nav .navbar-nav .nav-item .nav-link {
+  color: var(--brand-ink) !important;
+}
+
+header .main-navigation nav .navbar-nav .nav-item .nav-link.active,
+header .main-navigation nav .navbar-nav .nav-item .nav-link:hover {
+  color: var(--brand-blue) !important;
+}
+
+.scroll-top-arrow,
+.floating-contact-btn--email {
+  background: var(--brand-blue) !important;
+}
+
+.side-menu .bg-overlay,
+.side-menu-classic .bg-overlay {
+  background: rgba(59, 91, 255, 0.88) !important;
+}

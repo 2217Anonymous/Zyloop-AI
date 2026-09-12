@@ -12,11 +12,14 @@ export default {
     },
     extend: {
       colors: {
-        red: '#f71c52',
-        purple: '#554c86',
-        green: '#39d47a',
-        dark: '#202020',
-        body: '#2b2b2b',
+        red: '#3b5bff',
+        purple: '#7a4dff',
+        green: '#00b4ff',
+        cyan: '#00b4ff',
+        blue: '#3b5bff',
+        violet: '#7a4dff',
+        dark: '#0b1220',
+        body: '#1e293b',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

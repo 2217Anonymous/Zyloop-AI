@@ -490,7 +490,7 @@ export default function Comparison() {
                 {/* ZYLOOP AI Pie Chart */}
                 <CirclePieChart
                   percentage={current.score.zyloopai}
-                  color="#10b981"
+                  color="#00b4ff"
                   title={current.score.zyloopaiTitle}
                   subtitle={current.score.zyloopaiSubtitle}
                 />
@@ -505,7 +505,7 @@ export default function Comparison() {
                 {/* Traditional Pie Chart */}
                 <CirclePieChart
                   percentage={current.score.legacy}
-                  color="#ef4444"
+                  color="#7a4dff"
                   title={current.score.legacyTitle}
                   subtitle={current.score.legacySubtitle}
                 />

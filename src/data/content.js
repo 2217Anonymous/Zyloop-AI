@@ -28,7 +28,8 @@ export function contactMailtoHref(email = contactInfo.email) {
 }
 
 export const heroVideo = {
-  src: '/images/zyloop-ai.mp4',
+  src: '/images/zyloop-ai.webm',
+  type: 'video/webm',
   poster: '/images/slide1.jpg',
 }
 
@@ -363,7 +364,7 @@ export const businessCategories = [
     title: 'Finance Ops',
     badge: 'Business Category',
     image:
-      'https://images.unsplash.com/photo-1554224154-26032ffc0d66?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80',
     desc: 'Simplify invoicing, expense tracking, payroll, and reporting with accurate, AI-driven automation that keeps your finances in order.',
     points: [
       'Automated invoicing and payment reminders',

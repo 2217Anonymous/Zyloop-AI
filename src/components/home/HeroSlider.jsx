@@ -55,7 +55,7 @@ export default function HeroSlider() {
           preload="auto"
           poster={heroVideo.poster}
         >
-          <source src={heroVideo.src} type="video/mp4" />
+          <source src={heroVideo.src} type={heroVideo.type || 'video/webm'} />
         </video>
         <div className="hero-cinematic-shade" aria-hidden="true"></div>
 
