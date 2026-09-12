@@ -282,10 +282,49 @@
   padding: 20px;
 }
 
-.cms-quick-actions h2 {
+.cms-quick-actions h2,
+.cms-site-settings h2 {
   font-family: 'Outfit', sans-serif;
   font-size: 20px;
   margin: 0 0 14px;
+}
+
+.cms-site-settings h2 {
+  margin-top: 28px;
+}
+
+.cms-site-settings h2:first-child {
+  margin-top: 0;
+}
+
+.cms-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cms-logo-preview {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--cms-border);
+  border-radius: 12px;
+}
+
+.cms-video-preview {
+  width: 100%;
+  max-width: 420px;
+  max-height: 220px;
+  border-radius: 12px;
+  background: #0b1220;
+}
+
+@media (max-width: 767px) {
+  .cms-form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cms-action-row {

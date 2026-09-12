@@ -3,6 +3,7 @@ import {
   FaBlog,
   FaComments,
   FaQuestionCircle,
+  FaCog,
   FaSignOutAlt,
   FaTachometerAlt,
 } from 'react-icons/fa'
@@ -14,6 +15,7 @@ const navItems = [
   { to: '/admin/blogs', label: 'Blogs', icon: FaBlog },
   { to: '/admin/testimonials', label: 'Testimonials', icon: FaComments },
   { to: '/admin/faqs', label: 'FAQs', icon: FaQuestionCircle },
+  { to: '/admin/settings', label: 'Site Settings', icon: FaCog },
 ]
 
 export default function AdminSidebar({ mobileOpen, onClose }) {

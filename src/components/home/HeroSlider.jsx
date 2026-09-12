@@ -1,24 +1,29 @@
 import { useEffect, useRef, useState } from 'react'
 import { FaPlay } from 'react-icons/fa'
 import { heroVideo, marqueeTickerItems, navItems, selectSolution } from '../../data/content'
+import { DEFAULT_SETTINGS } from '../../api/settings'
+import { useSiteSettings } from '../../context/SiteSettingsContext'
 import { BrandLogo } from '../layout/ZLogo'
 import { TextMarquee } from '../ui/MarqueeStrip'
 import NavAnchor from '../NavAnchor'
 import VideoModal from '../VideoModal'
 import { scrollToHash } from '../../hooks/useSmoothScroll'
 
-const heroContent = {
-  badge: 'Zyloop Automate',
-  heading: 'Automate What',
-  accent: 'Matters',
-  text: 'Build intelligent AI workflows and let Zyloop automate WhatsApp, CRM, healthcare, finance, and everyday business operations.',
-  primaryCta: 'Explore Automate',
-  solutionId: 'zyloopflow',
-}
-
 export default function HeroSlider() {
+  const { settings } = useSiteSettings()
   const videoRef = useRef(null)
   const [videoOpen, setVideoOpen] = useState(false)
+  const hero = {
+    badge: settings.heroBadge || DEFAULT_SETTINGS.heroBadge,
+    heading: settings.heroHeading || DEFAULT_SETTINGS.heroHeading,
+    accent: settings.heroAccent || DEFAULT_SETTINGS.heroAccent,
+    text: settings.heroText || DEFAULT_SETTINGS.heroText,
+    primaryCta: settings.heroPrimaryCta || DEFAULT_SETTINGS.heroPrimaryCta,
+    solutionId: settings.heroSolutionId || DEFAULT_SETTINGS.heroSolutionId,
+    src: settings.heroVideoUrl || heroVideo.src,
+    type: settings.heroVideoType || heroVideo.type,
+    poster: settings.heroPosterUrl || heroVideo.poster,
+  }
 
   useEffect(() => {
     const video = videoRef.current
@@ -30,7 +35,7 @@ export default function HeroSlider() {
     playVideo()
     video.addEventListener('canplay', playVideo)
     return () => video.removeEventListener('canplay', playVideo)
-  }, [])
+  }, [hero.src])
 
   const goToSolution = (solutionId) => {
     selectSolution(solutionId)
@@ -47,32 +52,33 @@ export default function HeroSlider() {
         </div>
         <video
           ref={videoRef}
+          key={hero.src}
           className="hero-cinematic-video"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          poster={heroVideo.poster}
+          poster={hero.poster}
         >
-          <source src={heroVideo.src} type={heroVideo.type || 'video/webm'} />
+          <source src={hero.src} type={hero.type || 'video/webm'} />
         </video>
         <div className="hero-cinematic-shade" aria-hidden="true"></div>
 
         <div className="hero-cinematic-copy">
-          <span className="hero-cinematic-badge">{heroContent.badge}</span>
+          <span className="hero-cinematic-badge">{hero.badge}</span>
           <h1 className="hero-cinematic-title">
-            <span>{heroContent.heading}</span>
-            <span>{heroContent.accent}</span>
+            <span>{hero.heading}</span>
+            <span>{hero.accent}</span>
           </h1>
-          <p className="hero-cinematic-text">{heroContent.text}</p>
+          <p className="hero-cinematic-text">{hero.text}</p>
           <div className="hero-cinematic-actions">
             <button
               type="button"
               className="hero-cinematic-btn hero-cinematic-btn--primary"
-              onClick={() => goToSolution(heroContent.solutionId)}
+              onClick={() => goToSolution(hero.solutionId)}
             >
-              {heroContent.primaryCta}
+              {hero.primaryCta}
               <span aria-hidden="true">→</span>
             </button>
             <button
@@ -121,8 +127,8 @@ export default function HeroSlider() {
       <VideoModal
         open={videoOpen}
         onClose={() => setVideoOpen(false)}
-        src={heroVideo.src}
-        poster={heroVideo.poster}
+        src={hero.src}
+        poster={hero.poster}
       />
     </section>
   )

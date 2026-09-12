@@ -152,5 +152,21 @@
       "answer": "Yes. Zyloop Voice offers instant API integration with tools like Jira, Slack, Mailchimp, Google Sheets, Zoho, and Gmail.",
       "order": 10
     }
+  ],
+  "settings": [
+    {
+      "id": 1,
+      "testimonialsEnabled": false,
+      "logoUrl": "/images/logo.png",
+      "heroVideoUrl": "/uploads/1789212980526-zyloop-ai.webm",
+      "heroVideoType": "video/webm",
+      "heroPosterUrl": "/images/slide1.jpg",
+      "heroBadge": "Zyloop Automate",
+      "heroHeading": "Automate What",
+      "heroAccent": "Matters",
+      "heroText": "Build intelligent AI workflows and let Zyloop automate WhatsApp, CRM, healthcare, finance, and everyday business operations.",
+      "heroPrimaryCta": "Explore Automate",
+      "heroSolutionId": "zyloopflow"
+    }
   ]
 }

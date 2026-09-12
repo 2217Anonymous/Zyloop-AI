@@ -23,10 +23,18 @@ export async function apiRequest(path, options = {}) {
     if (token) headers.set('Authorization', `Bearer ${token}`)
   }
 
-  const response = await fetch(`${API_BASE}${path}`, {
-    ...fetchOptions,
-    headers,
-  })
+  let response
+  try {
+    response = await fetch(`${API_BASE}${path}`, {
+      ...fetchOptions,
+      headers,
+    })
+  } catch {
+    throw new ApiError(
+      'Could not reach the server. Restart npm run dev, then try again with an MP4 or WEBM under 200 MB.',
+      0,
+    )
+  }
 
   if (!response.ok) {
     let message = 'Request failed'
