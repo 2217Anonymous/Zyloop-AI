@@ -65,7 +65,7 @@ export default function Layout() {
             isHome={isHome}
           />
           <SideMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
-          <Outlet />
+          <Outlet context={{ setMenuOpen }} />
           <SiteFooter />
           {!isHome && <FixedMarqueeBar />}
           <FloatingContactBar />

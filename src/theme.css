@@ -77,7 +77,7 @@ body{
     position: relative;
 }
 
-body {font-family: 'Inter', sans-serif; font-size: 17px;color: #1e293b;font-weight:400;line-height:1.7;letter-spacing: 0.012em;word-spacing: 0.04em;width: 100%; overflow-x: hidden}
+body {font-family: 'Inter', sans-serif; font-size: 17px;color: #1e293b;font-weight:400;line-height:1.7;letter-spacing: 0.012em;word-spacing: 0.04em;width: 100%; overflow-x: visible}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {line-height: 1.25; font-weight: 700; font-family: 'Outfit', sans-serif;margin-bottom: 0;letter-spacing: 0.02em}
 a, *::before, *::after, img, span, input, button, .navbar, .fixedmenu, .tp-bullet, .owl-dot, .owl-prev, .owl-next {transition: ease-in-out 0.2s;-webkit-transition: ease-in-out 0.2s;-moz-transition: ease-in-out 0.2s;-ms-transition: ease-in-out 0.2s;-o-transition: ease-in-out 0.2s;}
 section,.section-padding {position: relative;overflow: hidden;}

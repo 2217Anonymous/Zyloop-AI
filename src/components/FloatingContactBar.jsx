@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { FaEnvelope, FaInstagram, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 import { contactInfo, contactMailtoHref, contactTelHref } from '../data/content'
 
@@ -35,8 +36,27 @@ const items = [
 ]
 
 export default function FloatingContactBar() {
+  const [hidden, setHidden] = useState(false)
+
+  useEffect(() => {
+    const section = document.getElementById('comparison')
+    if (!section) return undefined
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setHidden(entry.isIntersecting),
+      { rootMargin: '-12% 0px -12% 0px', threshold: 0.08 },
+    )
+
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <aside className="floating-contact-bar" aria-label="Quick contact links">
+    <aside
+      className={`floating-contact-bar${hidden ? ' is-section-hidden' : ''}`}
+      aria-label="Quick contact links"
+      aria-hidden={hidden}
+    >
       {items.map(({ id, label, href, Icon, className, external }) => (
         <a
           key={id}

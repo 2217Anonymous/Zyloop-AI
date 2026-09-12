@@ -31,7 +31,10 @@ export default function Blog() {
       />
       <section className="blog-list-hero">
         <Container>
-          <h1 className="blog-list-hero-title">AI Automation Blog</h1>
+          <h1 className="blog-list-hero-title">
+            AI Automation
+            <span>Blog</span>
+          </h1>
           <p className="blog-list-hero-lead">
             Guides on WhatsApp automation, agentic AI, CRM workflows, and enterprise operations from ZYLOOP AI.
           </p>
