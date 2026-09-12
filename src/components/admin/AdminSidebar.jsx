@@ -7,7 +7,7 @@ import {
   FaTachometerAlt,
 } from 'react-icons/fa'
 import { useAuth } from '../../context/AuthContext'
-import ZyloopLogo from '../ZyloopLogo'
+import { BrandLogo } from '../layout/ZLogo'
 
 const navItems = [
   { to: '/admin', label: 'Dashboard', icon: FaTachometerAlt, end: true },
@@ -37,8 +37,10 @@ export default function AdminSidebar({ mobileOpen, onClose }) {
       )}
       <aside className={`cms-sidebar${mobileOpen ? ' is-open' : ''}`}>
         <div className="cms-sidebar-brand">
-          <ZyloopLogo theme="light" size="sm" className="cms-brand-logo" />
-          <span>CMS Admin</span>
+          <a href="/" className="cms-brand-logo" aria-label="ZYLOOP AI Home">
+            <BrandLogo width={168} />
+          </a>
+          <span>Admin</span>
         </div>
 
         <nav className="cms-sidebar-nav">
