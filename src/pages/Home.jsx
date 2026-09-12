@@ -1,0 +1,26 @@
+import HeroSlider from '../components/home/HeroSlider'
+import About from '../sections/About'
+import Stats from '../sections/Stats'
+import Team from '../sections/Team'
+import Comparison from '../sections/Comparison'
+import Testimonials from '../sections/Testimonials'
+import Faq from '../sections/Faq'
+import BlogTeaser from '../sections/BlogTeaser'
+import Contact from '../sections/Contact'
+
+export default function Home() {
+  return (
+    <main className="home-page">
+      <HeroSlider />
+      <About />
+      <Stats />
+      <Team />
+      <Comparison />
+      <Testimonials />
+      <Faq />
+      <BlogTeaser />
+      <Contact />
+    </main>
+  )
+}
+

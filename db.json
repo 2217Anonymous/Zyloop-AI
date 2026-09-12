@@ -1,0 +1,156 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "zyloop@2026"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "How Agentic AI Is Transforming Enterprise Operations in 2026",
+      "slug": "agentic-ai-workplace-transformation",
+      "image": "/images/blogs/b2.jpg",
+      "date": "2026-02-24",
+      "author": "ZYLOOP AI Research",
+      "categories": [
+        "Agentic AI",
+        "Automation"
+      ],
+      "tags": [
+        "Agentic AI",
+        "Automation",
+        "Enterprise"
+      ],
+      "excerpt": "Explore how autonomous voice-native agents plan, decide, and execute complex cross-department workflows without human bottlenecking.",
+      "content": "Autonomous AI agents are no longer experimental — they are becoming the operational backbone of modern enterprises.\n\n<strong>ZYLOOP AI </strong>enables organizations to deploy agent swarms that coordinate across sales, support, finance, and IT without brittle point integrations.\n\nKey outcomes include faster cycle times, fewer manual handoffs, and measurable ROI within the first quarter of deployment.",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "slug": "voice-first-customer-engagement",
+      "title": "The Rise of Voice-First Native AI Agents in Customer Service",
+      "image": "/images/blogs/b1.jpg",
+      "date": "2026-01-18",
+      "author": "ZYLOOP AI Team",
+      "categories": [
+        "Voice AI",
+        "Customer Experience"
+      ],
+      "tags": [
+        "Voice AI",
+        "IVR",
+        "Customer Experience"
+      ],
+      "excerpt": "Low-latency real-time voice models now support multilingual customer resolution, IVR modernization, and automated sales outreach.",
+      "content": "Voice-first AI is reshaping how customers interact with brands. Instead of navigating phone trees, callers speak naturally and get instant resolution.\n\nZyloop Voice connects to leading LLMs with real-time streaming, regional language support, and native CRM sync.\n\nTeams report higher CSAT, lower average handle time, and 24/7 coverage without expanding headcount."
+    },
+    {
+      "id": 3,
+      "slug": "whatsapp-automation-for-business",
+      "title": "Scaling Revenue With AI-Powered WhatsApp Business Automation",
+      "image": "/images/blogs/b3.jpg",
+      "date": "2026-01-05",
+      "author": "ZYLOOP AI Team",
+      "categories": [
+        "WhatsApp",
+        "Conversational AI"
+      ],
+      "tags": [
+        "WhatsApp",
+        "Conversational AI",
+        "Revenue"
+      ],
+      "excerpt": "Connect conversational intelligence to the world's most popular messaging app for instant lead qualification, bookings, and customer support.",
+      "content": "WhatsApp is where your customers already are. ZYLOOP AI brings intelligent automation to Business API workflows for lead capture, appointment booking, and support triage.\n\nCombine chatbots, voice callbacks, and CRM updates in one unified platform.\n\nBusinesses using omnichannel AI assistants see faster response times and higher conversion on inbound leads."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sara Williams",
+      "role": "VP Operations, NovaRetail",
+      "image": "/images/test1.jpg",
+      "text": "ZYLOOP AI replaced four disconnected tools with one unified platform. Our team deploys voice agents in minutes and sees call outcomes sync directly into CRM.",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Julia Miltese",
+      "role": "Head of Customer Success, FinEdge",
+      "image": "/images/test2.jpg",
+      "text": "Zyloop Voice handles multilingual support around the clock. Customers get natural conversations while our agents focus on complex escalations.",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "name": "Marcus Chen",
+      "role": "CTO, HealthBridge",
+      "image": "/images/test1.jpg",
+      "text": "End-to-end workflow automation cut manual processing by 85%. ZYLOOP AI integrates with our existing stack without a dedicated engineering team.",
+      "order": 3
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How quickly can I deploy a Zyloop Voice AI agent?",
+      "answer": "Very quickly. Zyloop Voice is built for a no coding, no complex setup — just plug and play experience, with a drag-and-drop UI that lets you deploy your voice AI agent in minutes, not days.",
+      "order": 3
+    },
+    {
+      "id": 2,
+      "question": "How does Zyloop Voice AI work?",
+      "answer": "Zyloop Voice connects to LLMs via its API and handles real-time voice input and output. When a request is sent with voice input, Zyloop Voice processes, interprets, and responds using natural language — similar to how a human agent would.",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "question": "Do I need coding skills to set up a voice agent?",
+      "answer": "No. Zyloop Voice includes a drag-and-drop UI to deploy voice AI agents in minutes without writing code.",
+      "order": 1
+    },
+    {
+      "id": 4,
+      "question": "What are the common use cases for Zyloop Voice?",
+      "answer": "Zyloop Voice is ideal for customer support bots, voice assistants, appointment booking, sales calls, IVR systems, and voice-driven workflows across e-commerce, healthcare, SaaS, and fintech.",
+      "order": 4
+    },
+    {
+      "id": 5,
+      "question": "Does Zyloop Voice support both inbound and outbound calls?",
+      "answer": "Yes. Zyloop Voice supports both outgoing and incoming calls, making it suitable for reminders, lead follow-ups, and customer support automation.",
+      "order": 5
+    },
+    {
+      "id": 6,
+      "question": "What languages does Zyloop Voice support?",
+      "answer": "Zyloop Voice supports most languages, with a focus on regional languages including Tamil, Telugu, Malayalam, Hindi, Kannada, and English.",
+      "order": 6
+    },
+    {
+      "id": 7,
+      "question": "Is real-time voice response supported?",
+      "answer": "Yes. Zyloop Voice supports low-latency, real-time streaming so conversations feel natural and immediate.",
+      "order": 7
+    },
+    {
+      "id": 8,
+      "question": "How is data security handled?",
+      "answer": "Zyloop Voice uses encryption protocols and secure API practices. The platform is GDPR certified and SOC Type II certified.",
+      "order": 8
+    },
+    {
+      "id": 9,
+      "question": "Can I customize the voice, tone, and personality of my AI agent?",
+      "answer": "Yes. You can customize voices, tones, personalities, and conversation flow logic using your preferred LLM prompts.",
+      "order": 9
+    },
+    {
+      "id": 10,
+      "question": "Can Zyloop Voice integrate with my existing tools and CRMs?",
+      "answer": "Yes. Zyloop Voice offers instant API integration with tools like Jira, Slack, Mailchimp, Google Sheets, Zoho, and Gmail.",
+      "order": 10
+    }
+  ]
+}
