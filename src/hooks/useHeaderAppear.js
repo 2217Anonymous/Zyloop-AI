@@ -11,8 +11,9 @@ export default function useHeaderAppear() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY
-      setAppeared(y > 260)
-      setShowTop(y > 500)
+      const heroHideAt = Math.max(window.innerHeight - 64, 520)
+      setAppeared(y > heroHideAt)
+      setShowTop(y > heroHideAt + 200)
     }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })

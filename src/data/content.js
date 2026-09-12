@@ -28,30 +28,80 @@ export function contactMailtoHref(email = contactInfo.email) {
 }
 
 export const heroVideo = {
-  src: '/images/blogs/video.mp4',
+  src: '/images/zyloop-ai.mp4',
   poster: '/images/slide1.jpg',
 }
 
 export const slides = [
   {
-    heading: 'ENTERPRISE',
-    accent: 'AGENTIC AI PLATFORM',
-    text: 'Transform your business with ZYLOOP AI‑powered solutions. Automate customer interactions, internal workflows, CRM operations, and learning systems through our unified agentic AI platform.',
+    heading: 'Automate What',
+    accent: 'Matters',
+    badge: 'Zyloop Automate',
+    text: 'Build intelligent workflows and let Zyloop handle the repetitive work across your business systems.',
+    primaryCta: 'Explore Automate',
+    solutionId: 'zyloopflow',
     image: '/images/slide1.jpg',
   },
   {
-    heading: 'ZYLOOP',
-    accent: 'VOICE-FIRST AGENTS',
-    text: 'Build voice agents for any business. Real-time call handling with AI, no-code setup, and natural conversational flows for support and sales that deliver immediate, human-like experiences.',
-    image: '/images/slide3.jpg',
-  },
-  {
-    heading: 'ZYLOOP',
-    accent: 'WHATSAPP AUTOMATION',
-    text: 'Connect AI directly to WhatsApp Business to automate conversations, capture qualified leads, and provide instant customer support at scale with smooth human handoff.',
+    heading: 'Connect Every',
+    accent: 'Conversation',
+    badge: 'Zyloop Connect',
+    text: 'Automate WhatsApp conversations, capture qualified leads, and hand off to humans when it matters.',
+    primaryCta: 'Explore Connect',
+    solutionId: 'zyloopchat',
     image: '/images/slide2.jpg',
   },
+  {
+    heading: 'Care That',
+    accent: 'Never Waits',
+    badge: 'Zyloop Health',
+    text: 'Streamline hospital operations, appointments, and patient records through one connected platform.',
+    primaryCta: 'Explore Health',
+    solutionId: 'zyloophealth',
+    image: '/images/p4.jpg',
+  },
+  {
+    heading: 'Finance Without',
+    accent: 'The Friction',
+    badge: 'Zyloop Finance',
+    text: 'Simplify lending operations from application to approval with automated tracking and verification.',
+    primaryCta: 'Explore Finance',
+    solutionId: 'zyloopfinance',
+    image: '/images/p2.jpg',
+  },
+  {
+    heading: 'Know Every',
+    accent: 'Customer',
+    badge: 'Zyloop CRM',
+    text: 'Organize relationships, automate sales workflows, and keep every customer signal in one place.',
+    primaryCta: 'Explore CRM',
+    solutionId: 'zyloopcrm',
+    image: '/images/p3.jpg',
+  },
+  {
+    heading: 'Learn Faster',
+    accent: 'Together',
+    badge: 'Zyloop Learn',
+    text: 'Deliver structured learning paths, track progress, and scale training across your whole workforce.',
+    primaryCta: 'Explore Learn',
+    solutionId: 'zylooplearning',
+    image: '/images/slide3.jpg',
+  },
 ]
+
+export const heroBottomNav = [
+  { id: 'zyloopflow', label: 'Automate' },
+  { id: 'zyloopchat', label: 'Connect' },
+  { id: 'zyloophealth', label: 'Health' },
+  { id: 'zyloopfinance', label: 'Finance' },
+  { id: 'zyloopcrm', label: 'CRM' },
+  { id: 'zylooplearning', label: 'Learn' },
+]
+
+export function selectSolution(id) {
+  if (typeof window === 'undefined' || !id) return
+  window.dispatchEvent(new CustomEvent('zyloop:select-solution', { detail: { id } }))
+}
 
 export const aboutSolutions = [
   {

@@ -67,7 +67,7 @@ export default function Layout() {
           <SideMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
           <Outlet />
           <SiteFooter />
-          <FixedMarqueeBar />
+          {!isHome && <FixedMarqueeBar />}
           <FloatingContactBar />
           <ScrollToTop visible={showTop} />
         </>

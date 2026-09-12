@@ -1,126 +1,122 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { FaPlay } from 'react-icons/fa'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Controller, EffectFade } from 'swiper/modules'
-import { heroVideo, slides } from '../../data/content'
-import { Container, Row, Col } from '../Grid'
-import SliderArrows from './SliderArrows'
+import { heroVideo, marqueeTickerItems, navItems, selectSolution } from '../../data/content'
+import { BrandLogo } from '../layout/ZLogo'
+import { TextMarquee } from '../ui/MarqueeStrip'
+import NavAnchor from '../NavAnchor'
 import VideoModal from '../VideoModal'
-import useMouseParallax from '../../hooks/useMouseParallax'
 import { scrollToHash } from '../../hooks/useSmoothScroll'
 
+const heroContent = {
+  badge: 'Zyloop Automate',
+  heading: 'Automate What',
+  accent: 'Matters',
+  text: 'Build intelligent workflows and let Zyloop handle the repetitive work across your business systems.',
+  primaryCta: 'Explore Automate',
+  solutionId: 'zyloopflow',
+}
+
 export default function HeroSlider() {
-  const [textSwiper, setTextSwiper] = useState(null)
-  const [imgSwiper, setImgSwiper] = useState(null)
+  const videoRef = useRef(null)
   const [videoOpen, setVideoOpen] = useState(false)
 
-  useMouseParallax('.slider-area')
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return undefined
+    const playVideo = () => {
+      video.muted = true
+      video.play().catch(() => {})
+    }
+    playVideo()
+    video.addEventListener('canplay', playVideo)
+    return () => video.removeEventListener('canplay', playVideo)
+  }, [])
+
+  const goToSolution = (solutionId) => {
+    selectSolution(solutionId)
+    scrollToHash('#about')
+  }
 
   return (
-    <section className="slider-area">
-      <div className="bg-overlay"></div>
-      <Container className="relative">
-        <div className="inner-bg-overlay"></div>
-        <Row>
-          <Col
-            span={12}
-            lg={6}
-            className="slider-detail text-center lg:text-left wow fadeInLeft"
-            data-wow-delay=".8s"
-          >
-            <Swiper
-              modules={[Controller, EffectFade]}
-              effect="fade"
-              fadeEffect={{ crossFade: true }}
-              onSwiper={setTextSwiper}
-              controller={{ control: imgSwiper }}
-              allowTouchMove={false}
-              speed={600}
-              autoHeight
-              className="hero-text-swiper"
+    <section className="slider-area hero-cinematic" id="home" aria-label="ZYLOOP AI hero">
+      <div className="hero-cinematic-stage">
+        <div className="hero-cinematic-top">
+          <div className="hero-cinematic-marquee">
+            <TextMarquee items={marqueeTickerItems} />
+          </div>
+        </div>
+        <video
+          ref={videoRef}
+          className="hero-cinematic-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={heroVideo.poster}
+        >
+          <source src={heroVideo.src} type="video/mp4" />
+        </video>
+        <div className="hero-cinematic-shade" aria-hidden="true"></div>
+
+        <div className="hero-cinematic-copy">
+          <span className="hero-cinematic-badge">{heroContent.badge}</span>
+          <h1 className="hero-cinematic-title">
+            <span>{heroContent.heading}</span>
+            <span>{heroContent.accent}</span>
+          </h1>
+          <p className="hero-cinematic-text">{heroContent.text}</p>
+          <div className="hero-cinematic-actions">
+            <button
+              type="button"
+              className="hero-cinematic-btn hero-cinematic-btn--primary"
+              onClick={() => goToSolution(heroContent.solutionId)}
             >
-              {slides.map((slide) => (
-                <SwiperSlide key={slide.heading}>
-                  <div className="slider-slide">
-                    <div className="slider-inner-content">
-                      <h4 className="slide-heading">
-                        {slide.heading} <span>{slide.accent}</span>
-                      </h4>
-                      <p className="slide-text">{slide.text}</p>
-                      <span>
-                        <a
-                          className="btn anim-btn rounded-pill scroll"
-                          href="#about"
-                          onClick={(e) => {
-                            e.preventDefault()
-                            scrollToHash('#about')
-                          }}
-                        >
-                          LEARN MORE
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </Col>
+              {heroContent.primaryCta}
+              <span aria-hidden="true">→</span>
+            </button>
+            <button
+              type="button"
+              className="hero-cinematic-btn hero-cinematic-btn--ghost"
+              onClick={() => setVideoOpen(true)}
+            >
+              <FaPlay />
+              Watch Demo
+            </button>
+          </div>
+        </div>
 
-          <Col
-            span={12}
-            lg={6}
-            className="slider-img wow fadeInRight"
-            data-wow-delay=".8s"
+        <nav className="hero-bottom-nav" aria-label="Product navigation">
+          <a
+            className="hero-bottom-nav-logo"
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToHash('#home')
+            }}
           >
-            <div className="hero-image-frame" data-depth="0.1">
-              <Swiper
-                modules={[Controller]}
-                onSwiper={setImgSwiper}
-                controller={{ control: textSwiper }}
-                direction="vertical"
-                speed={600}
-                slidesPerView={1}
-                className="hero-img-swiper"
-              >
-                {slides.map((slide) => (
-                  <SwiperSlide key={slide.image}>
-                    <div className="img-slide">
-                      <img src={slide.image} alt={`${slide.heading} ${slide.accent}`} />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <BrandLogo width={148} />
+          </a>
 
-              <button
-                type="button"
-                className="hero-video-play"
-                onClick={() => setVideoOpen(true)}
-                aria-label="Play demo video"
-              >
-                <span className="hero-video-play__overlay" aria-hidden="true"></span>
-                <span className="hero-video-play__icon-wrap" aria-hidden="true">
-                  <FaPlay className="hero-video-play__icon" />
-                </span>
-              </button>
-            </div>
-          </Col>
-        </Row>
+          <ul className="hero-bottom-nav-links">
+            {navItems.map((item) => (
+              <li key={item.id}>
+                <NavAnchor hash={item.hash} home={item.id === 'home'} className="hero-bottom-nav-link">
+                  {item.label}
+                </NavAnchor>
+              </li>
+            ))}
+          </ul>
 
-        <SliderArrows
-          onUp={() => {
-            imgSwiper?.slidePrev()
-            textSwiper?.slidePrev()
-          }}
-          onDown={() => {
-            imgSwiper?.slideNext()
-            textSwiper?.slideNext()
-          }}
-        />
-      </Container>
+          <button
+            type="button"
+            className="hero-bottom-nav-cta"
+            onClick={() => scrollToHash('#contact')}
+          >
+            Get Started
+          </button>
+        </nav>
+      </div>
 
       <VideoModal
         open={videoOpen}

@@ -19,6 +19,7 @@ import './blog.css'
 import './wow.css'
 import './admin.css'
 import './typography.css'
+import './hero-blog.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
