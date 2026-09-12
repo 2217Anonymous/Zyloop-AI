@@ -19,8 +19,12 @@ export default {
         body: '#2b2b2b',
       },
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
-        oswald: ['Oswald', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+        roboto: ['Inter', 'sans-serif'],
+        oswald: ['Outfit', 'sans-serif'],
       },
       spacing: {
         section: '120px',

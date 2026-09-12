@@ -75,7 +75,7 @@ export default function CircleProgress({
           style={{
             fontSize: '32px',
             fontWeight: '700',
-            fontFamily: "'Oswald', sans-serif",
+            fontFamily: "'Outfit', sans-serif",
             letterSpacing: '0.02em',
           }}
         >

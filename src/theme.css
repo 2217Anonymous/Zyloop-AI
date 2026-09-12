@@ -77,8 +77,8 @@ body{
     position: relative;
 }
 
-body {font-family: 'Roboto', sans-serif; font-size: 16px;color: #2b2b2b;font-weight:300;line-height:25px;width: 100%; overflow-x: hidden}
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {line-height: 1.2; font-weight: 500; font-family: 'Roboto', sans-serif;margin-bottom: 0}
+body {font-family: 'Inter', sans-serif; font-size: 17px;color: #1e293b;font-weight:400;line-height:1.7;letter-spacing: 0.012em;word-spacing: 0.04em;width: 100%; overflow-x: hidden}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {line-height: 1.25; font-weight: 700; font-family: 'Outfit', sans-serif;margin-bottom: 0;letter-spacing: 0.02em}
 a, *::before, *::after, img, span, input, button, .navbar, .fixedmenu, .tp-bullet, .owl-dot, .owl-prev, .owl-next {transition: ease-in-out 0.2s;-webkit-transition: ease-in-out 0.2s;-moz-transition: ease-in-out 0.2s;-ms-transition: ease-in-out 0.2s;-o-transition: ease-in-out 0.2s;}
 section,.section-padding {position: relative;overflow: hidden;}
 a {color:inherit;text-decoration: none;}
@@ -106,7 +106,7 @@ ul{margin-bottom: 0;}
 .opacity-9{opacity: .9;}
 
 /* button */
-.btn {-webkit-appearance: initial; overflow: hidden;position: -webkit-sticky;position: sticky; z-index: 2; display:inline-block; font-size: 17px; border:2px solid transparent; letter-spacing: .5px; line-height: inherit; border-radius: 0; text-transform:capitalize; width: auto;font-family: 'Roboto', sans-serif; font-weight: 500; -webkit-transition: all .5s ease;-o-transition: all .5s ease !important;transition: all .5s ease !important;}
+.btn {-webkit-appearance: initial; overflow: hidden;position: -webkit-sticky;position: sticky; z-index: 2; display:inline-block; font-size: 17px; border:2px solid transparent; letter-spacing: .5px; line-height: inherit; border-radius: 0; text-transform:capitalize; width: auto;font-family: 'Inter', sans-serif; font-weight: 500; -webkit-transition: all .5s ease;-o-transition: all .5s ease !important;transition: all .5s ease !important;}
 /* button size */
 
 /* background color */
@@ -167,16 +167,21 @@ ul{margin-bottom: 0;}
  }
 .heading{
     color: #FFFFFF;
-    font-family: Oswald, sans-serif;
-    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 46px;
     font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.22;
     margin-bottom: 50px;
 }
 .text{
     color: #FFFFFF;
-    font-family: Roboto, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.015em;
+    word-spacing: 0.05em;
 }
 .heading span{
     display: block;
@@ -189,7 +194,7 @@ ul{margin-bottom: 0;}
     background-color: transparent;
     transition: .5s ease;
     font-size: 14px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 .white-trans-btn:hover{
     background-color: #FFFFFF;
@@ -202,7 +207,7 @@ ul{margin-bottom: 0;}
     padding: 8px 35px;
     background-color: #39d47a;
     font-size: 14px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
 
     border-radius: 0.5em;
     text-transform: uppercase;
@@ -236,7 +241,7 @@ ul{margin-bottom: 0;}
     padding: 8px 35px;
     background-color: #f71c52;
     font-size: 14px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
 
     border-radius: 0.5em;
     text-transform: uppercase;
@@ -272,7 +277,7 @@ ul{margin-bottom: 0;}
     padding: 8px 35px;
     background-color: #554c86;
     font-size: 14px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
 
     border-radius: 0.5em;
     letter-spacing: 0.1em;
@@ -313,7 +318,7 @@ ul{margin-bottom: 0;}
     font-size: 13px;
     padding: 10px 30px 10px 30px;
     transition: .8s ease;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     text-decoration: none;
 }
@@ -389,7 +394,7 @@ header .upper-nav .top-personal-info li:last-child{
 header .upper-nav .top-personal-info li a{
     color: #333333;
     font-size: 14px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
     transition: .5s ease;
     font-weight: 400;
 }
@@ -471,7 +476,7 @@ header .main-navigation nav .navbar-nav .nav-item{
 header .main-navigation nav .navbar-nav .nav-item .nav-link{
     padding-top: 0;
     color: #000000;
-    font-family: Oswald, sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
     font-weight: 500;
     transition: .5s ease;
@@ -798,7 +803,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     line-height: normal;
     position: relative;
     border-radius: 0;
-    font-family: Oswald, sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 .side-nav .navbar-nav .nav-link::after{
     content: "";
@@ -837,8 +842,8 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     display: block;
     color: #FFFFFF;
     font-size:16px;
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     margin-bottom: 5px;
 }
 .social-icons-simple{
@@ -946,9 +951,12 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 }
 .slider-area .slider-detail .slider-slide .slider-inner-content .slide-heading{
     color: #FFFFFF;
-    font-family: Oswald, sans-serif;
-    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 48px;
     font-weight: 700;
+    letter-spacing: 0.04em;
+    word-spacing: 0.08em;
+    line-height: 1.22;
     margin-bottom: 30px;
 }
 .slider-area .slider-detail .slider-slide .slider-inner-content .slide-heading span{
@@ -956,9 +964,12 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 }
 .slider-area .slider-detail .slider-slide .slider-inner-content .slide-text{
     color: #FFFFFF;
-    font-weight: 300;
-    font-family: Roboto, sans-serif;
-    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
+    word-spacing: 0.08em;
     margin-bottom: 30px;
 }
 .slider-area .slider-arrows{
@@ -1053,8 +1064,8 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 .about-sec .services-area .services .service-card .card-heading{
     color: #FFFFFF;
     font-size: 28px;
-    font-family: Oswald, sans-serif;
-    font-weight: 300;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
     transition: .5s ease;
 }
 
@@ -1074,7 +1085,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 ====================================== */
 
 .stats-sec .stats-heading-area .sub-heading{
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size:18px;
     color: #f71c52;
     font-weight: 400;
@@ -1116,8 +1127,8 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 .stats-sec .circular-wrap .circle .counter-num {
     color: #000000;
     font-size: 1.875rem;
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
 .stats-sec .circular-wrap h4.darkcolor{
@@ -1125,7 +1136,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     margin-left: auto;
     margin-right: auto;
     font-weight: 500;
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #000000;
     font-size: 20px;
     opacity: .7;
@@ -1185,7 +1196,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 }
 .team-sec .inner-team-sec .team-carousel .team-box .team-info{
     color: #FFFFFF;
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-top: 30px;
 }
 .team-sec .inner-team-sec .team-carousel .team-box .team-info .team-name{
@@ -1195,7 +1206,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 }
 .team-sec .inner-team-sec .team-carousel .team-box .team-info .team-designation{
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .team-box .overlay{
@@ -1340,7 +1351,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     font-size: 13px;
     font-weight: 600;
     color: #000000;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-right: 15px;
     border-bottom: solid 2px transparent ;
 }
@@ -1366,7 +1377,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 }
 .cbp-l-caption-title {
     color: #ffffff !important;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: 400 !important;
     font-size: 15px !important;
 }
@@ -1394,7 +1405,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     transform: rotate(90deg);
 }
 .portfolio-hover-effect .hover-text .p-hover-title{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
     color: #FFFFFF;
     font-weight: 500;
@@ -1438,7 +1449,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 .portfolio-foot-detail .p-text{
     color: #000000;
     font-size: 13px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     display: inline-block;
     margin-bottom: 8px;
@@ -1450,7 +1461,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 .portfolio-foot-detail .p-num{
     color: #000000;
     font-size: 50px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
 }
 
@@ -1504,7 +1515,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     color: #FFFFFF;
     font-size: 24px;
     font-weight: 400;
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 /* ===================================
         Our Cast sec css
@@ -1594,7 +1605,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     z-index: -1;
 }
 .contact-sec .contact-details{
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
     width: 90%;
     margin-left: 20px;
 }
@@ -1927,7 +1938,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     background-color:#f71c52;
 }
 .slider-sec .inner-slider-content h4{
-    font-family:Oswald, sans-serif;
+    font-family:'Outfit', sans-serif;
     font-weight: bold;
     font-size: 60px;
     color: #FFFFFF;
@@ -1952,7 +1963,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
 .crumbs .breadcrumb li a{
     color: #FFFFFF;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
     border-bottom: solid 1px transparent;
     transition: .5s ease;
@@ -1985,13 +1996,13 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     font-size: 40px;
     color: #000000;
     font-weight: 500;
-    font-family: Roboto , sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .standalone-detail .para_text{
     color: #000000;
     font-weight: 500;
-    font-family: Roboto , sans-serif;
+    font-family: 'Inter', sans-serif;
     text-align: center;
     font-size: 15px;
     margin: 0 auto;
@@ -2003,14 +2014,14 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     padding-bottom: 100px;
 }
 .standalone-area .gradient-text1{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     margin-bottom: 12px;
 }
 .standalone-area .stand-img-des .para_text{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #000000;
-    font-weight: 300;
+    font-weight: 400;
     opacity: .8;
 }
 
@@ -2518,7 +2529,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
         right: -4%;
     }
     .slider-area .slider-detail .slider-slide .slider-inner-content .slide-text {
-        font-size: 14px;
+        font-size: 18px;
     }
     .testimonial-sec .testimonial-area .container {
         max-width: 1040px;
@@ -2548,7 +2559,7 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     }
     .slider-area .slider-detail .slider-slide .slider-inner-content .slide-text {
         margin-bottom: 40px;
-        font-size: 16px;
+        font-size: 18px;
     }
     .slider-area .slider-arrows .slider-arr {
         height: 45px;

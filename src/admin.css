@@ -19,7 +19,7 @@
   display: flex;
   background: var(--cms-bg);
   color: var(--cms-text);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .cms-sidebar {
@@ -163,7 +163,7 @@
 
 .cms-page-header h1,
 .cms-login-card h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(28px, 4vw, 36px);
   font-weight: 700;
   margin: 0 0 6px;
@@ -223,7 +223,7 @@
 
 .cms-stat-count {
   margin: 4px 0 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 28px;
   font-weight: 700;
 }
@@ -238,7 +238,7 @@
 }
 
 .cms-quick-actions h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 20px;
   margin: 0 0 14px;
 }
@@ -452,7 +452,7 @@
 
 .cms-preview-title {
   margin: 0 0 10px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.35rem;
   line-height: 1.35;
   font-weight: 500;
@@ -818,7 +818,7 @@
 }
 
 .cms-modal h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   margin: 0 0 10px;
 }
 

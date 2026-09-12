@@ -340,7 +340,7 @@ function CirclePieChart({ percentage, color, title, subtitle, size = 130 }) {
             textAnchor="middle"
             dominantBaseline="middle"
             fill="#0f172a"
-            style={{ fontSize: '22px', fontWeight: '700', fontFamily: 'Oswald, sans-serif' }}
+            style={{ fontSize: '22px', fontWeight: '700', fontFamily: 'Outfit, sans-serif' }}
           >
             {percentage}%
           </text>

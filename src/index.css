@@ -242,10 +242,10 @@ header .main-navigation nav .navbar-nav .nav-item {
 }
 
 header .main-navigation nav .navbar-nav .nav-item .nav-link {
-  font-family: 'Oswald', sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.5px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
   color: #000000 !important;
   padding: 0 !important;
   line-height: 1 !important;
@@ -382,7 +382,7 @@ header .fixed-nav-logo img,
 
 .scroll-watermark-text {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(65px, 12vw, 155px);
   font-weight: 900;
   letter-spacing: 0.06em;
@@ -480,24 +480,28 @@ header .fixed-nav-logo img,
 
 .slider-area .slider-detail .slide-heading {
   color: #FFFFFF !important;
-  font-family: 'Oswald', sans-serif !important;
-  font-size: 58px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: clamp(30px, 4vw, 48px) !important;
   font-weight: 700 !important;
-  line-height: 1.12 !important;
+  line-height: 1.22 !important;
   margin-bottom: 25px !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
+  letter-spacing: 0.04em !important;
+  word-spacing: 0.08em !important;
 }
 
 .slider-area .slider-detail .slide-text {
   color: #FFFFFF !important;
-  font-family: 'Roboto', sans-serif !important;
-  font-weight: 300 !important;
-  font-size: 15.5px !important;
-  line-height: 26px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.02em !important;
+  word-spacing: 0.08em !important;
   margin-bottom: 35px !important;
-  max-width: 480px !important;
-  opacity: 0.95 !important;
+  max-width: 540px !important;
+  opacity: 1 !important;
+  text-transform: none !important;
 }
 
 .slider-area .slider-img {
@@ -826,7 +830,7 @@ header .inner-header:not(.header-appear) .sidemenu_btn-inline {
   line-height: 1 !important;
   padding: 0 !important;
   margin: 0 !important;
-  font-family: 'Oswald', sans-serif !important;
+  font-family: 'Outfit', sans-serif !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   vertical-align: middle !important;
@@ -1404,7 +1408,7 @@ header .sidemenu_btn.sidemenu_btn-inline,
   font-size: 36px;
   font-weight: 700;
   line-height: normal;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   text-transform: uppercase;
   position: relative;
   text-decoration: none;
@@ -1435,8 +1439,8 @@ header .sidemenu_btn.sidemenu_btn-inline,
   display: block;
   color: #fff;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
   margin-bottom: 5px;
 }
 
@@ -1461,9 +1465,9 @@ header .sidemenu_btn.sidemenu_btn-inline,
 
 .side-menu-classic .side-footer p {
   margin: 0;
-  font-size: 14px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 @media (max-width: 991px) {
@@ -1837,7 +1841,7 @@ header .fixed-nav-links a svg {
 
 .preloader-brand {
   margin: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1899,7 +1903,7 @@ body.is-page-loading {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -1911,7 +1915,7 @@ body.is-page-loading {
 }
 
 .zen-vtab-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 52px;
   font-weight: 700;
   color: #000000;
@@ -1926,7 +1930,7 @@ body.is-page-loading {
 }
 
 .zen-vtab-desc {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: #64748b;
@@ -1963,7 +1967,7 @@ body.is-page-loading {
 }
 
 .zen-vtab-sidebar-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1972,7 +1976,7 @@ body.is-page-loading {
 }
 
 .zen-vtab-sidebar-count {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: #f71c52;
@@ -2021,7 +2025,7 @@ body.is-page-loading {
 }
 
 .zen-vtab-index {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 700;
   color: #94a3b8;
@@ -2045,7 +2049,7 @@ body.is-page-loading {
 }
 
 .zen-vtab-label {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #0f172a;
@@ -2107,7 +2111,7 @@ body.is-page-loading {
 
 .zen-content-badge {
   display: inline-block;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -2117,7 +2121,7 @@ body.is-page-loading {
 }
 
 .zen-content-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #0f172a;
@@ -2201,7 +2205,7 @@ body.is-page-loading {
 }
 
 .zen-brand-heading {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #0f172a;
@@ -2235,7 +2239,7 @@ body.is-page-loading {
 }
 
 .zen-card-headline {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -2314,7 +2318,7 @@ body.is-page-loading {
 }
 
 .zen-chart-panel-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -2324,7 +2328,7 @@ body.is-page-loading {
 
 .zen-chart-panel-sub {
   display: block;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   color: #64748b;
   margin-top: 2px;
@@ -2372,7 +2376,7 @@ body.is-page-loading {
 }
 
 .zen-pie-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 700;
   margin: 0 0 2px 0;
@@ -2398,7 +2402,7 @@ body.is-page-loading {
 }
 
 .zen-delta-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -2406,7 +2410,7 @@ body.is-page-loading {
 }
 
 .zen-delta-value {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 34px;
   font-weight: 700;
   color: #059669;
@@ -2518,7 +2522,7 @@ body.is-page-loading {
 
 .stats-modern-kicker {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -2531,7 +2535,7 @@ body.is-page-loading {
 }
 
 .stats-modern-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -2546,7 +2550,7 @@ body.is-page-loading {
 }
 
 .stats-modern-desc {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   color: #64748b;
   line-height: 1.6;
@@ -2576,7 +2580,7 @@ body.is-page-loading {
 }
 
 .stats-modern-pill {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -2602,7 +2606,7 @@ body.is-page-loading {
 }
 
 .stats-modern-card-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -2612,7 +2616,7 @@ body.is-page-loading {
 }
 
 .stats-modern-card-desc {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: #64748b;
   line-height: 1.55;
@@ -2694,7 +2698,7 @@ body.is-page-loading {
 
 .about-content-kicker {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -2706,7 +2710,7 @@ body.is-page-loading {
 }
 
 .about-content-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 42px;
   font-weight: 700;
   color: #ffffff;
@@ -2721,7 +2725,7 @@ body.is-page-loading {
 }
 
 .about-content-subhead {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -2731,7 +2735,7 @@ body.is-page-loading {
 }
 
 .about-content-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   line-height: 1.62;
   color: #f1f5f9;
@@ -2770,7 +2774,7 @@ body.is-page-loading {
 }
 
 .about-feature-label {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   line-height: 1.4;
   color: #ffffff;
@@ -2783,7 +2787,7 @@ body.is-page-loading {
 
 .about-explore-btn {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -2821,7 +2825,7 @@ body.is-page-loading {
 
 .about-green-kicker {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -2835,7 +2839,7 @@ body.is-page-loading {
 }
 
 .about-green-heading {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 38px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -2846,7 +2850,7 @@ body.is-page-loading {
 }
 
 .about-green-sub {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: #1a1a1a;
   margin: 0;
@@ -2914,8 +2918,8 @@ body.is-page-loading {
 
 .clean-card-heading {
   color: #000000;
-  font-size: 22px; /* Oswald title */
-  font-family: 'Oswald', sans-serif;
+  font-size: 22px; /* Outfit title */
+  font-family: 'Outfit', sans-serif;
   font-weight: 600;
   letter-spacing: 0.02em;
   margin: 0 0 6px 0;
@@ -2926,7 +2930,7 @@ body.is-page-loading {
 .clean-card-desc {
   color: #1a1a1a;
   font-size: 13.5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.35;
   margin: 0;
   max-width: 200px;
@@ -2997,7 +3001,7 @@ body.is-page-loading {
    ========================================================================== */
 .industry-section-kicker {
   display: inline-block;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -3057,7 +3061,7 @@ body.is-page-loading {
 
 .content-carousel-badge {
   color: rgba(255, 255, 255, 0.88);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.14em;
@@ -3066,7 +3070,7 @@ body.is-page-loading {
 }
 
 .content-carousel-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 24px;
   font-weight: 500;
   color: #ffffff;
@@ -3074,9 +3078,9 @@ body.is-page-loading {
 }
 
 .content-carousel-desc {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.82);
   margin: 12px 0 0 0;
@@ -3241,7 +3245,7 @@ body.is-page-loading {
 }
 
 .category-slide-badge {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.12em;
@@ -3313,7 +3317,7 @@ body.is-page-loading {
 }
 
 .category-split-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(26px, 2.5vw, 34px);
   font-weight: 500;
   line-height: 1.12;
@@ -3324,7 +3328,7 @@ body.is-page-loading {
 
 .category-split-title-badge {
   margin: 0 0 8px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.14em;
@@ -3334,7 +3338,7 @@ body.is-page-loading {
 
 .category-split-index {
   flex-shrink: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 17px;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -3451,9 +3455,9 @@ body.is-page-loading {
 
 .category-split-desc {
   margin: 4px 0 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.68;
   color: rgba(255, 255, 255, 0.88);
 }
@@ -3470,7 +3474,7 @@ body.is-page-loading {
 .category-split-points li {
   position: relative;
   padding-left: 18px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
@@ -3743,7 +3747,7 @@ body.is-page-loading {
 
 .faq-kicker {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -3756,7 +3760,7 @@ body.is-page-loading {
 }
 
 .faq-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(32px, 4.4vw, 46px);
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -3772,7 +3776,7 @@ body.is-page-loading {
 .faq-desc {
   max-width: 560px;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
@@ -3807,7 +3811,7 @@ body.is-page-loading {
   border: 0;
   outline: none;
   background: transparent;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 400;
   color: #0f172a;
@@ -3839,7 +3843,7 @@ body.is-page-loading {
 }
 
 .faq-number {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -3847,7 +3851,7 @@ body.is-page-loading {
 }
 
 .faq-question {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.45;
@@ -3886,7 +3890,7 @@ body.is-page-loading {
 .faq-answer {
   margin: 0;
   padding: 0 0 22px 52px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.75;
@@ -3896,7 +3900,7 @@ body.is-page-loading {
 .faq-empty {
   margin: 0;
   padding: 28px 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: #64748b;
   text-align: center;
@@ -3930,7 +3934,7 @@ body.is-page-loading {
 .content-state {
   padding: 18px 20px;
   border-radius: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 16px;

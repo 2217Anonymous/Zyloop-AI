@@ -108,13 +108,13 @@ export default function StudioSlider() {
                   : 'opacity-100 translate-y-0'
               }`}
             >
-              <h2 className="text-[38px] sm:text-[54px] lg:text-[62px] xl:text-[68px] font-bold text-[#202020] uppercase font-['Oswald',sans-serif] leading-[1.04] tracking-[-0.01em]">
+              <h2 className="text-[36px] sm:text-[48px] lg:text-[54px] xl:text-[58px] font-bold text-[#202020] uppercase font-['Outfit',sans-serif] leading-[1.18] tracking-[0.03em]">
                 <span>{slide.heading}</span>
                 <br />
                 <span>{slide.accent}</span>
               </h2>
 
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[#202020]/90 font-light max-w-[440px] leading-relaxed my-6 sm:my-8 font-['Roboto',sans-serif]">
+              <p className="text-[16px] sm:text-[17px] lg:text-[18px] text-[#202020] font-normal max-w-[480px] leading-[1.75] tracking-[0.015em] my-6 sm:my-8 font-['Inter',sans-serif]">
                 {slide.text}
               </p>
 

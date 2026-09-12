@@ -55,18 +55,18 @@ export default function HeroSlide({ slide, isActive, direction, onPrimary, onSec
               </span>
             </div>
 
-            <h2 className="flex flex-wrap gap-x-3 sm:gap-x-4 gap-y-1 sm:gap-y-2 items-baseline text-white drop-shadow-[0_4px_28px_rgba(0,0,0,0.85)]">
+            <h2 className="flex flex-wrap gap-x-3 sm:gap-x-4 gap-y-1 sm:gap-y-2 items-baseline text-white drop-shadow-[0_4px_28px_rgba(0,0,0,0.85)] font-['Outfit',sans-serif]">
               {words.map((word) => (
                 <span
                   key={`${slide.id}-${word}`}
-                  className="inline-block text-[2.4rem] sm:text-[3.6rem] lg:text-[4.6rem] xl:text-[5.2rem] font-bold leading-[1.05] tracking-[-0.03em]"
+                  className="inline-block text-[2.2rem] sm:text-[3.2rem] lg:text-[4rem] xl:text-[4.5rem] font-bold leading-[1.18] tracking-[0.02em]"
                 >
                   {word}
                 </span>
               ))}
             </h2>
 
-            <p className="mt-5 sm:mt-6 text-[17px] sm:text-[20px] font-light leading-[1.7] text-white max-w-[620px] drop-shadow-[0_2px_18px_rgba(0,0,0,0.9)]">
+            <p className="mt-5 sm:mt-6 text-[17px] sm:text-[18px] font-normal leading-[1.75] tracking-[0.015em] text-white max-w-[620px] drop-shadow-[0_2px_18px_rgba(0,0,0,0.9)] font-['Inter',sans-serif]">
               {slide.description}
             </p>
 
