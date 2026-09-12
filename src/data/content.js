@@ -411,7 +411,7 @@ export const faqSection = {
   kicker: "FAQ'S",
   titleBefore: 'Questions teams usually ask before they',
   titleAccent: 'deploy',
-  desc: 'Launch time, coding, connectors, languages, WhatsApp, and enterprise controls — in one place.',
+  desc: 'Answers on AI workflow automation, WhatsApp Business, no-code setup, connectors, languages, and enterprise controls.',
 }
 
 export const categories = [

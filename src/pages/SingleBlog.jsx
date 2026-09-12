@@ -8,6 +8,8 @@ import BlogFeaturedImage from '../components/BlogFeaturedImage'
 import BlogCommentForm from '../components/BlogCommentForm'
 import ContentState from '../components/ContentState'
 import { BlogContentBody } from '../utils/blogContent'
+import Seo from '../components/Seo'
+import { articleJsonLd, blogSeo, breadcrumbJsonLd } from '../data/seo'
 
 function formatDetailDate(dateStr) {
   if (!dateStr) return ''
@@ -50,6 +52,19 @@ export default function SingleBlog() {
 
   return (
     <main className="blog-detail-page">
+      {post && (
+        <Seo
+          {...blogSeo(post)}
+          jsonLd={[
+            articleJsonLd(post),
+            breadcrumbJsonLd([
+              { name: 'Home', path: '/' },
+              { name: 'Blog', path: '/blog' },
+              { name: post.title, path: `/blog/${post.slug}` },
+            ]),
+          ]}
+        />
+      )}
       <section className="blog-detail-wrap">
         <Container>
           <ContentState

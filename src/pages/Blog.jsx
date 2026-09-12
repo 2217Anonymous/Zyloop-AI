@@ -5,6 +5,8 @@ import { Container } from '../components/Grid'
 import BlogSidebar from '../components/BlogSidebar'
 import BlogFeaturedImage from '../components/BlogFeaturedImage'
 import ContentState from '../components/ContentState'
+import Seo from '../components/Seo'
+import { breadcrumbJsonLd, seoPages } from '../data/seo'
 
 export default function Blog() {
   const [blogs, setBlogs] = useState([])
@@ -20,9 +22,19 @@ export default function Blog() {
 
   return (
     <main className="blog-list-page">
+      <Seo
+        {...seoPages.blog}
+        jsonLd={breadcrumbJsonLd([
+          { name: 'Home', path: '/' },
+          { name: 'Blog', path: '/blog' },
+        ])}
+      />
       <section className="blog-list-hero">
         <Container>
-          <h1 className="blog-list-hero-title">BLOG LIST</h1>
+          <h1 className="blog-list-hero-title">AI Automation Blog</h1>
+          <p className="blog-list-hero-lead">
+            Guides on WhatsApp automation, agentic AI, CRM workflows, and enterprise operations from ZYLOOP AI.
+          </p>
         </Container>
       </section>
 

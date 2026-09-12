@@ -4526,6 +4526,14 @@ body.is-page-loading {
   text-transform: uppercase;
 }
 
+.blog-list-hero-lead {
+  max-width: 640px;
+  margin: 16px auto 0;
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
 .blog-list-page section,
 .blog-list-body {
   overflow: visible !important;

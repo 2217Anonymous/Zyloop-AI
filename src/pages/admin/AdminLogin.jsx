@@ -4,6 +4,8 @@ import { useAuth } from '../../context/AuthContext'
 import { useToast } from '../../context/ToastContext'
 import { getStoredToken } from '../../utils/authStorage'
 import ZyloopLogo from '../../components/ZyloopLogo'
+import Seo from '../../components/Seo'
+import { seoPages } from '../../data/seo'
 
 export default function AdminLogin() {
   const { isAuthenticated, login } = useAuth()
@@ -39,6 +41,7 @@ export default function AdminLogin() {
 
   return (
     <div className="cms-login-page">
+      <Seo {...seoPages.admin} title="Admin Login | ZYLOOP AI" />
       <div className="cms-login-card">
         <div className="cms-login-brand">
           <ZyloopLogo theme="dark" size="md" />

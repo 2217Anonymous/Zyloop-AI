@@ -41,7 +41,7 @@ export default function SiteFooter() {
             </Col>
             <Col lg={6} className="text-center lg:text-right">
               <p className="company-about fadeIn">
-                &copy; 2026 ZYLOOP AI. Made with love. All rights reserved.
+                &copy; 2026 ZYLOOP AI. AI automation software for WhatsApp, CRM, and enterprise workflows. Coimbatore, India.
               </p>
             </Col>
           </Row>

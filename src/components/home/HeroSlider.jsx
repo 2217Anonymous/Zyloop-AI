@@ -11,7 +11,7 @@ const heroContent = {
   badge: 'Zyloop Automate',
   heading: 'Automate What',
   accent: 'Matters',
-  text: 'Build intelligent workflows and let Zyloop handle the repetitive work across your business systems.',
+  text: 'Build intelligent AI workflows and let Zyloop automate WhatsApp, CRM, healthcare, finance, and everyday business operations.',
   primaryCta: 'Explore Automate',
   solutionId: 'zyloopflow',
 }
