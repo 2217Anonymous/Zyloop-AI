@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   LiaWhatsapp,
   LiaHospitalSolid,
@@ -21,6 +21,16 @@ const iconMap = {
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0)
   const current = aboutSolutions[activeIndex] || aboutSolutions[0]
+
+  useEffect(() => {
+    const onSelect = (event) => {
+      const nextIndex = aboutSolutions.findIndex((item) => item.id === event.detail?.id)
+      if (nextIndex >= 0) setActiveIndex(nextIndex)
+    }
+
+    window.addEventListener('zyloop:select-solution', onSelect)
+    return () => window.removeEventListener('zyloop:select-solution', onSelect)
+  }, [])
 
   return (
     <section className="about-sec relative" id="about">

@@ -1,6 +1,12 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
+function videoTypeFromSrc(src) {
+  if (src?.endsWith('.webm')) return 'video/webm'
+  if (src?.endsWith('.ogg') || src?.endsWith('.ogv')) return 'video/ogg'
+  return 'video/mp4'
+}
+
 export default function VideoModal({ open, onClose, src = '/images/blogs/video.mp4', poster = '/images/blogs/1.jpg' }) {
   useEffect(() => {
     if (!open) return undefined
@@ -37,7 +43,7 @@ export default function VideoModal({ open, onClose, src = '/images/blogs/video.m
           ×
         </button>
         <video className="video-modal-player" controls autoPlay playsInline poster={poster}>
-          <source src={src} type="video/mp4" />
+          <source src={src} type={videoTypeFromSrc(src)} />
         </video>
       </div>
     </div>,

@@ -69,6 +69,9 @@ export default function AdminDashboard() {
               <Link to="/admin/faqs/new" className="cms-btn cms-btn-secondary">
                 <FaPlus aria-hidden="true" /> New FAQ
               </Link>
+              <Link to="/admin/settings" className="cms-btn cms-btn-secondary">
+                <FaPlus aria-hidden="true" /> Site Settings
+              </Link>
             </div>
           </div>
         </>

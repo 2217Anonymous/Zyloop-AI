@@ -3,17 +3,19 @@ import {
   FaBlog,
   FaComments,
   FaQuestionCircle,
+  FaCog,
   FaSignOutAlt,
   FaTachometerAlt,
 } from 'react-icons/fa'
 import { useAuth } from '../../context/AuthContext'
-import ZyloopLogo from '../ZyloopLogo'
+import { BrandLogo } from '../layout/ZLogo'
 
 const navItems = [
   { to: '/admin', label: 'Dashboard', icon: FaTachometerAlt, end: true },
   { to: '/admin/blogs', label: 'Blogs', icon: FaBlog },
   { to: '/admin/testimonials', label: 'Testimonials', icon: FaComments },
   { to: '/admin/faqs', label: 'FAQs', icon: FaQuestionCircle },
+  { to: '/admin/settings', label: 'Site Settings', icon: FaCog },
 ]
 
 export default function AdminSidebar({ mobileOpen, onClose }) {
@@ -37,8 +39,10 @@ export default function AdminSidebar({ mobileOpen, onClose }) {
       )}
       <aside className={`cms-sidebar${mobileOpen ? ' is-open' : ''}`}>
         <div className="cms-sidebar-brand">
-          <ZyloopLogo theme="light" size="sm" className="cms-brand-logo" />
-          <span>CMS Admin</span>
+          <a href="/" className="cms-brand-logo" aria-label="ZYLOOP AI Home">
+            <BrandLogo width={168} />
+          </a>
+          <span>Admin</span>
         </div>
 
         <nav className="cms-sidebar-nav">

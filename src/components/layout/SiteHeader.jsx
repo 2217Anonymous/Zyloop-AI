@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import ColorLines from './ColorLines'
 import UpperNav from './UpperNav'
 import MainNav from './MainNav'
 import ScrollWatermark from '../ui/ScrollWatermark'
@@ -32,6 +31,10 @@ export default function SiteHeader({ appeared, setMenuOpen, activeSection, isHom
     if (!inner || !wrapper) return
 
     const applySpacerHeight = () => {
+      if (isHome) {
+        wrapper.style.minHeight = '0px'
+        return
+      }
       if (naturalHeightRef.current > 0) {
         wrapper.style.minHeight = `${naturalHeightRef.current}px`
       }
@@ -91,22 +94,24 @@ export default function SiteHeader({ appeared, setMenuOpen, activeSection, isHom
     }
 
     return () => ro.disconnect()
-  }, []) // Only run once on mount
+  }, [isHome])
 
-  // Keep spacer in sync whenever appeared changes
   useEffect(() => {
     const wrapper = wrapperRef.current
     if (!wrapper) return
+    if (isHome) {
+      wrapper.style.minHeight = '0px'
+      return
+    }
     if (naturalHeightRef.current > 0) {
       wrapper.style.minHeight = `${naturalHeightRef.current}px`
     }
-  }, [appeared])
+  }, [appeared, isHome])
 
   return (
     <header
       ref={wrapperRef}
-      id="home"
-      className="site-header relative z-[9999]"
+      className={`site-header relative z-[9999]${isHome ? ' site-header--home-hero' : ' site-header--standard'}`}
     >
       <div
         ref={innerRef}
@@ -116,7 +121,6 @@ export default function SiteHeader({ appeared, setMenuOpen, activeSection, isHom
         <div className="header-watermark-bg" aria-hidden="true">
           <ScrollWatermark text="ZYLOOP AI" className="header-scroll-watermark" range={280} />
         </div>
-        <ColorLines />
         <UpperNav onMenuOpen={() => setMenuOpen(true)} />
         <MainNav
           activeSection={activeSection}

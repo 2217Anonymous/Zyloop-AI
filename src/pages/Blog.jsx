@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { getBlogs } from '../api/blogs'
-import { formatBlogDate } from '../api/client'
-import { Container, Row, Col } from '../components/Grid'
-import PageBanner from '../components/PageBanner'
+import { Container } from '../components/Grid'
 import BlogSidebar from '../components/BlogSidebar'
 import BlogFeaturedImage from '../components/BlogFeaturedImage'
-import Button from '../components/Button'
 import ContentState from '../components/ContentState'
+import Seo from '../components/Seo'
+import { breadcrumbJsonLd, seoPages } from '../data/seo'
 
 export default function Blog() {
   const [blogs, setBlogs] = useState([])
@@ -21,60 +21,68 @@ export default function Blog() {
   }, [])
 
   return (
-    <main>
-      <PageBanner
-        title="BLOG CONTENT"
-        image="/images/blogs/s-blog-slider.jpg"
+    <main className="blog-list-page">
+      <Seo
+        {...seoPages.blog}
+        jsonLd={breadcrumbJsonLd([
+          { name: 'Home', path: '/' },
+          { name: 'Blog', path: '/blog' },
+        ])}
       />
-      <section className="main">
-        <div className="blog-content padding-top padding-bottom">
-          <Container>
-            <Row>
-              <Col span={12} lg={8} order={1} className="order-1">
-                <ContentState
-                  loading={loading ? 'Loading blog posts…' : false}
-                  error={!loading && error ? error : false}
-                  empty={!loading && !error && blogs.length === 0}
-                  emptyMessage="No blog posts published yet."
-                />
+      <section className="blog-list-hero">
+        <Container>
+          <h1 className="blog-list-hero-title">AI Automation Blog</h1>
+          <p className="blog-list-hero-lead">
+            Guides on WhatsApp automation, agentic AI, CRM workflows, and enterprise operations from ZYLOOP AI.
+          </p>
+        </Container>
+      </section>
 
-                <div className="main_content text-center lg:text-left">
-                  {blogs.map((post) => (
-                    <div className="single_blog" key={post.id}>
-                      <BlogFeaturedImage
-                        src={post.image}
-                        alt={post.title}
-                        className="single_img"
-                      />
-                      <div className="single_detail">
-                        <p className="blog-sub-heading text-center">
-                          <span></span>{(post.categories || [])[0] || 'ZYLOOP AI'}
-                        </p>
-                        <h2>{post.title}</h2>
-                        <span className="blog-text">
-                          <span>{formatBlogDate(post.date)}</span> | BY <span>{post.author}</span> |{' '}
-                          {(post.categories || []).map((c, i) => (
-                            <span key={c}>
-                              <span>{c}</span>
-                              {i < post.categories.length - 1 ? ', ' : ''}
-                            </span>
-                          ))}
-                        </span>
-                        <p className="p-text">{post.excerpt}</p>
-                        <Button variant="green" href={`/blog/${post.slug}`} as="a">
-                          READ MORE
-                        </Button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Col>
-              <Col span={12} lg={4} className="side-bar order-3 lg:order-2">
-                <BlogSidebar blogs={blogs} loading={loading} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
+      <section className="blog-list-body">
+        <Container>
+          <div className="blog-list-shell">
+            <div className="blog-list-main">
+              <ContentState
+                loading={loading ? 'Loading blog posts…' : false}
+                error={!loading && error ? error : false}
+                empty={!loading && !error && blogs.length === 0}
+                emptyMessage="No blog posts published yet."
+              />
+
+              <div className="blog-list-feed">
+                {blogs.map((post) => (
+                  <article className="blog-list-card" key={post.id}>
+                    <p className="blog-list-card-date">
+                      {new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      })}
+                    </p>
+                    <h2 className="blog-list-card-title">
+                      <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                    </h2>
+                    {post.excerpt && <p className="blog-list-card-excerpt">{post.excerpt}</p>}
+                    {post.image && (
+                      <Link to={`/blog/${post.slug}`} className="blog-list-card-media">
+                        <BlogFeaturedImage src={post.image} alt={post.title} className="single_img" />
+                      </Link>
+                    )}
+                    <Link className="blog-list-card-more" to={`/blog/${post.slug}`}>
+                      Read More <span aria-hidden="true">→</span>
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <aside className="blog-list-aside">
+              <div className="blog-list-aside-inner">
+                <BlogSidebar blogs={blogs} loading={loading} variant="list" />
+              </div>
+            </aside>
+          </div>
+        </Container>
       </section>
     </main>
   )

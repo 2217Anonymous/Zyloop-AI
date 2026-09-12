@@ -1,3 +1,4 @@
+import Seo from '../components/Seo'
 import HeroSlider from '../components/home/HeroSlider'
 import About from '../sections/About'
 import Stats from '../sections/Stats'
@@ -7,10 +8,19 @@ import Testimonials from '../sections/Testimonials'
 import Faq from '../sections/Faq'
 import BlogTeaser from '../sections/BlogTeaser'
 import Contact from '../sections/Contact'
+import { breadcrumbJsonLd, organizationJsonLd, seoPages, websiteJsonLd } from '../data/seo'
 
 export default function Home() {
   return (
     <main className="home-page">
+      <Seo
+        {...seoPages.home}
+        jsonLd={[
+          organizationJsonLd(),
+          websiteJsonLd(),
+          breadcrumbJsonLd([{ name: 'Home', path: '/' }]),
+        ]}
+      />
       <HeroSlider />
       <About />
       <Stats />

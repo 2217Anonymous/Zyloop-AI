@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 export default function CircleProgress({
   value,
   label,
-  color = '#f71c52',
+  color = '#3b5bff',
   size = 170,
   stroke = 9,
 }) {
@@ -75,7 +75,7 @@ export default function CircleProgress({
           style={{
             fontSize: '32px',
             fontWeight: '700',
-            fontFamily: "'Oswald', sans-serif",
+            fontFamily: "'Outfit', sans-serif",
             letterSpacing: '0.02em',
           }}
         >

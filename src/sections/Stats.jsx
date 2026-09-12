@@ -10,7 +10,7 @@ const statsData = [
     badge: '+55% Net Advantage',
     title: 'Autonomous Advantage',
     desc: 'Direct performance edge over 35% traditional legacy tooling across enterprise workflows.',
-    color: '#10b981',
+    color: '#00b4ff',
   },
   {
     id: 'scale',
@@ -19,7 +19,7 @@ const statsData = [
     badge: 'Worldwide Scale',
     title: 'Global Deployments',
     desc: 'Enterprise organizations successfully operating autonomous agent swarms with zero downtime.',
-    color: '#f71c52',
+    color: '#3b5bff',
   },
   {
     id: 'efficiency',

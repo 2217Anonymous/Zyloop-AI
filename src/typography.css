@@ -1,0 +1,377 @@
+/* ===================================
+   ZYLOOP AI — Typography system
+   Outfit for headings, Inter for body
+   =================================== */
+
+:root {
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body) !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.012em;
+  word-spacing: 0.04em;
+  color: #0b1220 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.02em !important;
+}
+
+p {
+  letter-spacing: 0.012em;
+  word-spacing: 0.04em;
+}
+
+.heading {
+  font-family: var(--font-display) !important;
+  font-size: clamp(32px, 4vw, 46px) !important;
+  font-weight: 700 !important;
+  line-height: 1.22 !important;
+  letter-spacing: 0.03em !important;
+}
+
+.text {
+  font-family: var(--font-body) !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.015em !important;
+  word-spacing: 0.05em !important;
+  text-transform: none !important;
+}
+
+/* Hero — keep words clearly separated */
+.slider-area .slider-detail .slide-heading,
+.slider-area .slider-detail .slider-slide .slider-inner-content .slide-heading {
+  font-family: var(--font-display) !important;
+  font-size: clamp(30px, 4vw, 48px) !important;
+  font-weight: 700 !important;
+  line-height: 1.22 !important;
+  letter-spacing: 0.04em !important;
+  word-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.slider-area .slider-detail .slide-text,
+.slider-area .slider-detail .slider-slide .slider-inner-content .slide-text {
+  font-family: var(--font-body) !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.02em !important;
+  word-spacing: 0.08em !important;
+  max-width: 540px !important;
+  opacity: 1 !important;
+  text-transform: none !important;
+}
+
+@media (max-width: 767px) {
+  .slider-area .slider-detail .slide-heading,
+  .slider-area .slider-detail .slider-slide .slider-inner-content .slide-heading {
+    font-size: 30px !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  .slider-area .slider-detail .slide-text,
+  .slider-area .slider-detail .slider-slide .slider-inner-content .slide-text {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+}
+
+/* Navigation */
+header .main-navigation nav .navbar-nav .nav-item .nav-link,
+header .main-navigation nav .navbar-nav .nav-item .nav-link.active,
+.header-appear .main-navigation .navbar-nav .nav-item .nav-link {
+  font-family: var(--font-display) !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+}
+
+header .upper-nav .top-personal-info li a {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+/* Buttons */
+.btn,
+.anim-btn,
+.pink-btn,
+.green-btn,
+.purple-btn,
+.white-trans-btn {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.anim-btn {
+  font-size: 14px !important;
+}
+
+.pink-btn,
+.green-btn,
+.purple-btn,
+.white-trans-btn {
+  font-size: 14px !important;
+}
+
+/* About */
+.about-content-title,
+.about-green-heading {
+  font-family: var(--font-display) !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.22 !important;
+}
+
+.about-content-text {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.015em !important;
+  word-spacing: 0.04em !important;
+}
+
+.about-feature-label {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+
+.about-green-sub {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+}
+
+.clean-card-heading {
+  font-family: var(--font-display) !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em !important;
+}
+
+.clean-card-desc {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+.about-explore-btn {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+/* Stats + comparison */
+.stats-modern-title,
+.zen-vtab-title,
+.faq-title {
+  font-family: var(--font-display) !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.22 !important;
+}
+
+.stats-modern-desc,
+.zen-vtab-desc,
+.faq-desc {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.015em !important;
+}
+
+.stats-modern-card-title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.stats-modern-card-desc,
+.zen-item-text {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.55 !important;
+}
+
+.zen-vtab-label,
+.zen-card-headline,
+.faq-question {
+  font-weight: 600 !important;
+}
+
+.faq-answer {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.75 !important;
+}
+
+/* Industry / category cards */
+.content-carousel-title,
+.category-split-title {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.content-carousel-desc,
+.category-split-desc {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.012em !important;
+  word-spacing: 0.04em !important;
+}
+
+.category-split-points li {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.55 !important;
+}
+
+#business-categories .testimonial-details .text {
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1.75 !important;
+}
+
+/* Contact + blog + footer */
+.contact-sec .heading {
+  font-size: clamp(30px, 3.4vw, 40px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.contact-sec .contact-details .text,
+.contact-sec .contact-details ul li,
+.company-about {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+}
+
+.blog-sec .blog-detail .heading,
+.blog-sec .blog-detail .heading span {
+  font-size: clamp(30px, 3.6vw, 42px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.blog-sec .blog-detail .text,
+.blog-teaser-excerpt {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+}
+
+.blog-teaser-latest-title {
+  font-weight: 600 !important;
+}
+
+.page-banner .inner-slider-content h4 {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em !important;
+}
+
+.page-banner-crumbs .breadcrumb-item,
+.page-banner-crumbs .breadcrumb-item a,
+.page-banner-crumbs .breadcrumb-item span {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+/* Side menu */
+.side-menu-classic .side-nav .navbar-nav .nav-link,
+.side-nav .navbar-nav .nav-link {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+}
+
+.side-menu-classic .menu-company-details span,
+.menu-company-details span,
+.side-menu-classic .side-footer p {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+/* Forms */
+.contact-sec .contact-form input,
+.contact-sec .contact-form input::placeholder,
+.contact-sec .contact-form textarea,
+.form-control,
+.faq-search input {
+  font-family: var(--font-body) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+/* Kickers stay small but readable */
+.zen-vtab-kicker,
+.stats-modern-kicker,
+.faq-kicker,
+.about-content-kicker,
+.about-green-kicker,
+.industry-section-kicker {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+}
+
+.scroll-watermark-text {
+  font-family: var(--font-display) !important;
+  font-weight: 800 !important;
+}
+
+.preloader-brand {
+  font-family: var(--font-display) !important;
+}
+
+.cms-shell {
+  font-family: var(--font-body) !important;
+}
+
+.blog-content h4,
+.blog-content .main_content .single_blog .single_detail h2,
+.blog-content .main_content .detail_blog .blog_detail h2 {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.015em !important;
+}
+
+.blog-content .main_content .single_blog .single_detail .p-text,
+.blog-content .main_content .detail_blog .blog_detail .d-text {
+  font-family: var(--font-body) !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.015em !important;
+  word-spacing: 0.04em !important;
+}

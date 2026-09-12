@@ -9,14 +9,18 @@ export const navItems = [
 ]
 
 export const contactInfo = {
-  phone: '+91 8825505169',
-  email: 'Zylearnai@gmail.com',
+  phone: '+91 97899 88166',
+  email: 'zyloopai@gmail.com',
   address: 'Kalapatti Main Rd, NGP Nagar, Nehru Nagar West, Coimbatore, Tamil Nadu 641048',
-  phones: ['+91 8825505169', '+91 9994267626'],
+  phones: ['+91 97899 88166'],
   whatsapp:
-    'https://api.whatsapp.com/send/?phone=918825505169&text&type=phone_number&app_absent=0',
+    'https://api.whatsapp.com/send/?phone=919789988166&text&type=phone_number&app_absent=0',
   instagram: 'https://instagram.com/zylearnai?igsh=MTNsMzFoMGY2ZHB6Mw==',
   locationNote: 'Visit our Coimbatore office or reach out by phone, WhatsApp, or email.',
+  mapEmbed:
+    'https://maps.google.com/maps?q=Kalapatti%20Main%20Rd%2C%20NGP%20Nagar%2C%20Nehru%20Nagar%20West%2C%20Coimbatore%2C%20Tamil%20Nadu%20641048&z=16&output=embed',
+  mapLink:
+    'https://www.google.com/maps/search/?api=1&query=Kalapatti+Main+Rd,+NGP+Nagar,+Nehru+Nagar+West,+Coimbatore,+Tamil+Nadu+641048',
 }
 
 export function contactTelHref(phone = contactInfo.phone) {
@@ -28,30 +32,81 @@ export function contactMailtoHref(email = contactInfo.email) {
 }
 
 export const heroVideo = {
-  src: '/images/blogs/video.mp4',
+  src: '/images/zyloop-ai.webm',
+  type: 'video/webm',
   poster: '/images/slide1.jpg',
 }
 
 export const slides = [
   {
-    heading: 'ENTERPRISE',
-    accent: 'AGENTIC AI PLATFORM',
-    text: 'Transform your business with ZYLOOP AI‑powered solutions. Automate customer interactions, internal workflows, CRM operations, and learning systems through our unified agentic AI platform.',
+    heading: 'Automate What',
+    accent: 'Matters',
+    badge: 'Zyloop Automate',
+    text: 'Build intelligent workflows and let Zyloop handle the repetitive work across your business systems.',
+    primaryCta: 'Explore Automate',
+    solutionId: 'zyloopflow',
     image: '/images/slide1.jpg',
   },
   {
-    heading: 'ZYLOOP',
-    accent: 'VOICE-FIRST AGENTS',
-    text: 'Build voice agents for any business. Real-time call handling with AI, no-code setup, and natural conversational flows for support and sales that deliver immediate, human-like experiences.',
-    image: '/images/slide3.jpg',
-  },
-  {
-    heading: 'ZYLOOP',
-    accent: 'WHATSAPP AUTOMATION',
-    text: 'Connect AI directly to WhatsApp Business to automate conversations, capture qualified leads, and provide instant customer support at scale with smooth human handoff.',
+    heading: 'Connect Every',
+    accent: 'Conversation',
+    badge: 'Zyloop Connect',
+    text: 'Automate WhatsApp conversations, capture qualified leads, and hand off to humans when it matters.',
+    primaryCta: 'Explore Connect',
+    solutionId: 'zyloopchat',
     image: '/images/slide2.jpg',
   },
+  {
+    heading: 'Care That',
+    accent: 'Never Waits',
+    badge: 'Zyloop Health',
+    text: 'Streamline hospital operations, appointments, and patient records through one connected platform.',
+    primaryCta: 'Explore Health',
+    solutionId: 'zyloophealth',
+    image: '/images/p4.jpg',
+  },
+  {
+    heading: 'Finance Without',
+    accent: 'The Friction',
+    badge: 'Zyloop Finance',
+    text: 'Simplify lending operations from application to approval with automated tracking and verification.',
+    primaryCta: 'Explore Finance',
+    solutionId: 'zyloopfinance',
+    image: '/images/p2.jpg',
+  },
+  {
+    heading: 'Know Every',
+    accent: 'Customer',
+    badge: 'Zyloop CRM',
+    text: 'Organize relationships, automate sales workflows, and keep every customer signal in one place.',
+    primaryCta: 'Explore CRM',
+    solutionId: 'zyloopcrm',
+    image: '/images/p3.jpg',
+  },
+  {
+    heading: 'Learn Faster',
+    accent: 'Together',
+    badge: 'Zyloop Learn',
+    text: 'Deliver structured learning paths, track progress, and scale training across your whole workforce.',
+    primaryCta: 'Explore Learn',
+    solutionId: 'zylooplearning',
+    image: '/images/slide3.jpg',
+  },
 ]
+
+export const heroBottomNav = [
+  { id: 'zyloopflow', label: 'Automate' },
+  { id: 'zyloopchat', label: 'Connect' },
+  { id: 'zyloophealth', label: 'Health' },
+  { id: 'zyloopfinance', label: 'Finance' },
+  { id: 'zyloopcrm', label: 'CRM' },
+  { id: 'zylooplearning', label: 'Learn' },
+]
+
+export function selectSolution(id) {
+  if (typeof window === 'undefined' || !id) return
+  window.dispatchEvent(new CustomEvent('zyloop:select-solution', { detail: { id } }))
+}
 
 export const aboutSolutions = [
   {
@@ -313,7 +368,7 @@ export const businessCategories = [
     title: 'Finance Ops',
     badge: 'Business Category',
     image:
-      'https://images.unsplash.com/photo-1554224154-26032ffc0d66?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80',
     desc: 'Simplify invoicing, expense tracking, payroll, and reporting with accurate, AI-driven automation that keeps your finances in order.',
     points: [
       'Automated invoicing and payment reminders',
@@ -356,7 +411,7 @@ export const faqSection = {
   kicker: "FAQ'S",
   titleBefore: 'Questions teams usually ask before they',
   titleAccent: 'deploy',
-  desc: 'Launch time, coding, connectors, languages, WhatsApp, and enterprise controls — in one place.',
+  desc: 'Answers on AI workflow automation, WhatsApp Business, no-code setup, connectors, languages, and enterprise controls.',
 }
 
 export const categories = [

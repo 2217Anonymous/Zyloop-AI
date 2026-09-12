@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import { ToastProvider } from './context/ToastContext'
+import { SiteSettingsProvider } from './context/SiteSettingsContext'
 import Layout from './components/Layout'
 import AdminLayout from './components/admin/AdminLayout'
 import ProtectedRoute from './components/admin/ProtectedRoute'
@@ -16,11 +17,13 @@ import AdminTestimonials from './pages/admin/AdminTestimonials'
 import AdminTestimonialForm from './pages/admin/AdminTestimonialForm'
 import AdminFaqs from './pages/admin/AdminFaqs'
 import AdminFaqForm from './pages/admin/AdminFaqForm'
+import AdminSiteSettings from './pages/admin/AdminSiteSettings'
 
 export default function App() {
   return (
     <AuthProvider>
       <ToastProvider>
+        <SiteSettingsProvider>
         <BrowserRouter>
           <ToastStack />
           <Routes>
@@ -43,6 +46,7 @@ export default function App() {
               <Route path="faqs" element={<AdminFaqs />} />
               <Route path="faqs/new" element={<AdminFaqForm />} />
               <Route path="faqs/:id/edit" element={<AdminFaqForm />} />
+              <Route path="settings" element={<AdminSiteSettings />} />
             </Route>
 
             <Route element={<Layout />}>
@@ -53,6 +57,7 @@ export default function App() {
             </Route>
           </Routes>
         </BrowserRouter>
+        </SiteSettingsProvider>
       </ToastProvider>
     </AuthProvider>
   )
