@@ -1,7 +1,7 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import { LiaPhoneSolid, LiaEnvelopeSolid } from 'react-icons/lia'
 import { contactInfo, contactMailtoHref, contactTelHref } from '../../data/content'
-import { Container, Row, Col } from '../Grid'
+import { Container } from '../Grid'
 
 const socialItems = [
   { href: '#', className: 'fb', Icon: FaFacebookF, label: 'Facebook', external: false },
@@ -55,31 +55,28 @@ function MenuButton({ className = '', onClick }) {
 export default function UpperNav({ onMenuOpen }) {
   return (
     <div className="upper-nav">
+      <div className="upper-nav-accent" aria-hidden="true" />
       <Container>
-        <Row className="upper-nav-row">
-          <Col span={6} className="upper-nav-left">
-            <ul className="top-personal-info">
-              <li>
-                <a href={contactTelHref()}>
-                  <LiaPhoneSolid aria-hidden="true" />
-                  {contactInfo.phone}
-                </a>
-              </li>
-              <li>
-                <a href={contactMailtoHref()}>
-                  <LiaEnvelopeSolid aria-hidden="true" />
-                  {contactInfo.email}
-                </a>
-              </li>
-            </ul>
-          </Col>
-          <Col span={6} className="upper-nav-right text-right">
-            <div className="upper-nav-actions">
-              <SocialLinks />
-              <MenuButton className="upper-nav-menu-btn" onClick={onMenuOpen} />
-            </div>
-          </Col>
-        </Row>
+        <div className="upper-nav-bar">
+          <ul className="top-personal-info">
+            <li>
+              <a href={contactTelHref()}>
+                <LiaPhoneSolid aria-hidden="true" />
+                <span>{contactInfo.phone}</span>
+              </a>
+            </li>
+            <li>
+              <a href={contactMailtoHref()}>
+                <LiaEnvelopeSolid aria-hidden="true" />
+                <span>{contactInfo.email}</span>
+              </a>
+            </li>
+          </ul>
+          <div className="upper-nav-actions">
+            <SocialLinks />
+            <MenuButton className="upper-nav-menu-btn" onClick={onMenuOpen} />
+          </div>
+        </div>
       </Container>
     </div>
   )

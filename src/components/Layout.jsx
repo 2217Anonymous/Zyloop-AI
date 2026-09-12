@@ -15,7 +15,7 @@ import { scrollToHash } from '../hooks/useSmoothScroll'
 export default function Layout() {
   const location = useLocation()
   const isHome = location.pathname === '/'
-  const { appeared, showTop } = useHeaderAppear()
+  const { appeared, showTop } = useHeaderAppear(isHome)
   const activeSection = useActiveSection(isHome)
   const [menuOpen, setMenuOpen] = useState(false)
   const [loading, setLoading] = useState(true)

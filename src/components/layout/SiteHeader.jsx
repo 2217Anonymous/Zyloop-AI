@@ -111,7 +111,7 @@ export default function SiteHeader({ appeared, setMenuOpen, activeSection, isHom
   return (
     <header
       ref={wrapperRef}
-      className={`site-header relative z-[9999]${isHome ? ' site-header--home-hero' : ''}`}
+      className={`site-header relative z-[9999]${isHome ? ' site-header--home-hero' : ' site-header--standard'}`}
     >
       <div
         ref={innerRef}

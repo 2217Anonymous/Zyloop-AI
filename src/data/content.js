@@ -9,14 +9,18 @@ export const navItems = [
 ]
 
 export const contactInfo = {
-  phone: '+91 8825505169',
-  email: 'Zylearnai@gmail.com',
+  phone: '+91 97899 88166',
+  email: 'zyloopai@gmail.com',
   address: 'Kalapatti Main Rd, NGP Nagar, Nehru Nagar West, Coimbatore, Tamil Nadu 641048',
-  phones: ['+91 8825505169', '+91 9994267626'],
+  phones: ['+91 97899 88166'],
   whatsapp:
-    'https://api.whatsapp.com/send/?phone=918825505169&text&type=phone_number&app_absent=0',
+    'https://api.whatsapp.com/send/?phone=919789988166&text&type=phone_number&app_absent=0',
   instagram: 'https://instagram.com/zylearnai?igsh=MTNsMzFoMGY2ZHB6Mw==',
   locationNote: 'Visit our Coimbatore office or reach out by phone, WhatsApp, or email.',
+  mapEmbed:
+    'https://maps.google.com/maps?q=Kalapatti%20Main%20Rd%2C%20NGP%20Nagar%2C%20Nehru%20Nagar%20West%2C%20Coimbatore%2C%20Tamil%20Nadu%20641048&z=16&output=embed',
+  mapLink:
+    'https://www.google.com/maps/search/?api=1&query=Kalapatti+Main+Rd,+NGP+Nagar,+Nehru+Nagar+West,+Coimbatore,+Tamil+Nadu+641048',
 }
 
 export function contactTelHref(phone = contactInfo.phone) {
